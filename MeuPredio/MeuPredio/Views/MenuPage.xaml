@@ -3,9 +3,16 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="MeuPredio.Views.MenuPage"
-    
+    xmlns:local="clr-namespace:MeuPredio.Helpers.Behaviors"
     xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin">
 
+    
+    
+    <MasterDetailPage.Resources>
+        <ResourceDictionary>
+            <local:SelectedItemEventArgsToSelectedItemConverter x:Key="SelectedItemConverter" />
+        </ResourceDictionary>
+    </MasterDetailPage.Resources>
 
     <MasterDetailPage.Master>
         <ContentPage
@@ -15,7 +22,7 @@
 
                 <!-- ###########################################-->
                 <!-- ###########################################-->
-                <!-- ###########################################-->
+                <!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
                 <!-- ###########################################-->
                 <!-- ################  PERFIL ##################-->
 
@@ -54,15 +61,26 @@
 
                 <!-- ################ FIM  PERFIL ##############-->
                 <!-- ###########################################-->
-                <!-- ###########################################-->
+                <!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
                 <!-- ###########################################-->
                 <!-- ###############  LISTA MENU ###############-->
 
                 <ListView
                     SeparatorVisibility="None"
-                    SelectionMode="None"
                     ItemsSource="{Binding ListaMenu, Mode=TwoWay}"
                     HasUnevenRows="False">
+
+                    <!-- ###########################################-->
+                    <!-- ################  Behaviors ##################-->
+                    <ListView.Behaviors>
+                        <local:EventToCommandBehavior
+                                
+                                EventName="ItemSelected" 
+                                Command="{Binding NavigationCommand, Mode=TwoWay}"
+                                Converter="{StaticResource SelectedItemConverter}" />
+                    </ListView.Behaviors>
+                    <!-- ################ FIM  Behaviors ##############-->
+                    <!-- ###########################################-->
 
                     <ListView.ItemTemplate>
                         <DataTemplate>
@@ -99,7 +117,7 @@
 
                 <!-- ############ FIM  LISTA MENU ##############-->
                 <!-- ###########################################-->
-                <!-- ###########################################-->
+                <!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
                 <!-- ###########################################-->
                 <!-- ###############  LINHA ####################-->
 
@@ -110,7 +128,7 @@
 
                 <!-- ############ FIM  LINHA ###################-->
                 <!-- ###########################################-->
-                <!-- ###########################################-->
+                <!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
                 <!-- ###########################################-->
                 <!-- ############# BOTÃO SAIR ##################-->
 
@@ -150,103 +168,6 @@
 
         </ContentPage>
     </MasterDetailPage.Master>
-
-    <!--<MasterDetailPage.Master>
-        <ContentPage 
-            Title="Menu" 
-            Padding="0">
-
-            <ContentPage.Content>
-               
-                <StackLayout>
-                    <Grid 
-                        BackgroundColor="Transparent">
-                        <Grid.RowDefinitions>
-                            <RowDefinition Height="200"/>
-                            <RowDefinition Height="*" />
-                        </Grid.RowDefinitions>
-                        <Image Source="perfil" Aspect="AspectFill"/>
-                        <StackLayout 
-                            Padding="0,20,0,0" 
-                            HorizontalOptions="CenterAndExpand" 
-                            VerticalOptions="CenterAndExpand">
-                            -->
-    <!--<controls:CircleImage 
-                                BorderColor="White" BorderThickness="2" 
-                                Source="logo.png" Aspect="AspectFill" 
-                                WidthRequest="85" HeightRequest="85" />-->
-    <!--
-                            <Label Text="Will Brigida" 
-                                   TextColor="White" 
-                                   FontSize="Large" />
-
-                        </StackLayout>
-                    </Grid>
-            
-                    <ListView
-                        SeparatorVisibility="None"
-                        ItemsSource="{Binding ListaMenu, Mode=TwoWay}"
-                        HasUnevenRows="False">
-
-
-                        <ListView.ItemTemplate>
-                            <DataTemplate>
-                                <ViewCell>
-                                    <Grid
-                                        Padding="20,0" >
-                                        <Grid.ColumnDefinitions>
-                                            <ColumnDefinition Width="30"/>
-                                            <ColumnDefinition Width="*"/>
-                                        </Grid.ColumnDefinitions>
-
-                                        <Label
-                                            TextColor="{Binding Cor}"
-                                            Text="{Binding Icone}"
-                                            Style="{StaticResource MainMenuIconsStyle}"/>
-                                        <Label
-                                            FontSize="16"
-                                            TextColor="Black"
-                                            VerticalOptions="Center"
-                                            Grid.Column="1"
-                                            Text="{Binding Titulo}"/>
-                                    </Grid>
-                                </ViewCell>
-                            </DataTemplate>
-                        </ListView.ItemTemplate>
-
-                    </ListView >
-                  
-                    
-                    <ContentView 
-                        Margin="10"
-                        HeightRequest="0.5" BackgroundColor="Gray" />
-                 
-
-                    <Grid
-                        RowSpacing="50"
-                        HeightRequest="50"
-                        Margin="20,0,0,10">
-                        <Grid.ColumnDefinitions>
-                            <ColumnDefinition Width="30"/>
-                            <ColumnDefinition Width="*"/>
-                        </Grid.ColumnDefinitions>
-
-                        <Label  
-                            Text="&#xf011;"
-                            TextColor="Red"
-                            Style="{StaticResource MainMenuIconsStyle}"/>
-                        <Label 
-                            Text="Sair" 
-                            FontSize="16" 
-                            Grid.Column="1" />
-                    </Grid>
-
-
-
-                </StackLayout>
-            </ContentPage.Content>
-        </ContentPage>
-    </MasterDetailPage.Master>-->
 
 </MasterDetailPage>
 

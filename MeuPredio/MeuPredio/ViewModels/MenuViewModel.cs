@@ -1,4 +1,5 @@
 ﻿using MeuPredio.ViewModels.Classes;
+using MeuPredio.Views;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -53,23 +54,20 @@ namespace MeuPredio.ViewModels
             switch (titulo)
             {
                 case "Portaria":
-                    mdp.Detail = new NavigationPage(new MainPage());
+                    mdp.Detail = new NavigationPage(new PortariaPage());
                     break;
-                    //case "Reclamações":
-                    //    mdp.Detail = new NavigationPage(new ReclamacaoTabbedPage());
-                    //    break;
-                    //case "Informações":
-                    //    mdp.Detail = new NavigationPage(new InformacoesPage());
-                    //    break;
-                    //case "Atendimentos":
-                    //    mdp.Detail = new NavigationPage(new AtendimentosPage());
-                    //    break;
-                    //case "Scanner":
-                    //    mdp.Detail = new NavigationPage(new ScannerPage());
-                    //    break;
-                    //case "Login":
-                    //    mdp.Detail = new NavigationPage(new LoginPage());
-                    //    break;
+                case "Reclamações":
+                    mdp.Detail = new NavigationPage(new ReclamacoesPage());
+                    break;
+                case "Informações":
+                    mdp.Detail = new NavigationPage(new InformacoesPage());
+                    break;
+                case "Atendimentos":
+                    mdp.Detail = new NavigationPage(new AtendimentosPage());
+                    break;
+                case "Scanner":
+                    mdp.Detail = new NavigationPage(new ScannerPage());
+                    break;
             }
 
         }
@@ -79,10 +77,7 @@ namespace MeuPredio.ViewModels
         {
             App.Current.MainPage.DisplayAlert("", "Botão sair clicado", "ok");
         }
-
-
     }
-
 
     #endregion
 }

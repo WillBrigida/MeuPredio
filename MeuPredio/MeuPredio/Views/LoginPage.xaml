@@ -1,0 +1,147 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage 
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="MeuPredio.Views.LoginPage"
+    NavigationPage.HasNavigationBar="False">
+
+
+
+    <AbsoluteLayout>
+
+        <!--<Image 
+            x:Name="Logo" 
+            AbsoluteLayout.LayoutFlags="All"
+            AbsoluteLayout.LayoutBounds=".5,.5,.6,.6"
+            Source="logo.png"/>-->
+
+
+        <StackLayout>
+            <Grid
+            RowSpacing="25">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="40" />
+                    <RowDefinition Height="100"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+
+
+                <Image
+                    Grid.Row="1"
+                    Source="logo"
+                    HeightRequest="40"
+                    WidthRequest="40"/>
+
+
+
+                <StackLayout
+                    Grid.Row="2"
+                    Spacing="15"
+                    Padding="20"
+                    VerticalOptions="EndAndExpand"
+                    HorizontalOptions="FillAndExpand">
+
+                    <Entry
+                        Margin="30,0"
+                            VerticalOptions="Center"
+                            Keyboard="Email"
+                            Placeholder=" Login"
+                            TextColor="Black"/>
+
+
+
+                    <Entry
+                    Margin="30,0"
+                            IsPassword="True"
+                            Placeholder=" Senha"
+                            TextColor="Black"/>
+                    
+                    <StackLayout>
+                        <Grid
+                            Margin="20,10,0,0"
+                        ColumnSpacing="0">
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="60"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Switch
+                                Margin="0,0"
+                                Grid.Column="0"
+                                HorizontalOptions="Center"/>
+
+
+                            <Label
+                                TextColor="Gray"
+                                VerticalOptions="Center"
+                                Font="MarkerFelt-Thin"
+                                HorizontalOptions="StartAndExpand"
+                                Grid.Column="1"
+                                FontSize="Small"
+                                Text="Lembrar minha senha"/>
+
+
+                        </Grid>
+                    </StackLayout>
+
+
+                    <Button 
+                        Margin="0,20"
+                        Text="entrar"
+                        FontSize="14"
+                        BackgroundColor="#49a4aa"
+                        CornerRadius="21"
+                        Padding="70,0"
+                        HeightRequest="42"
+                        TextColor="White"
+                        FontAttributes="Bold"
+                        HorizontalOptions="Center"
+                        Command="{Binding LoginCommand}"  />
+
+
+
+                    <ActivityIndicator
+                        Margin="110,-48,0,0"
+                        HorizontalOptions="Center"
+                        Color="White"
+                        HeightRequest="25"
+                        IsRunning="{Binding IsRunning}"/>
+
+                   
+
+                </StackLayout>
+            </Grid>
+
+
+            <!--<Grid IsVisible="{Binding IsVisible}"
+            Margin="0,-1,0,0"
+            VerticalOptions="FillAndExpand">
+
+            <Label Text="Welcome to Xamarin Forms!" 
+           VerticalOptions="Center" 
+           HorizontalOptions="Center" />
+            
+            
+
+
+            <Grid x:Name="SplashGrid" 
+                  BackgroundColor="{StaticResource Primary}">
+                <Image
+                    x:Name="Logo" 
+                    Source="logo" 
+                    HorizontalOptions="Center" 
+                    VerticalOptions="Center">
+                    <Image.TranslationY>
+                        <OnPlatform x:TypeArguments="x:Double">
+
+                            <On Platform="Android">-12</On>
+                        </OnPlatform>
+                    </Image.TranslationY>
+                </Image>
+            </Grid>
+        </Grid>-->
+
+        </StackLayout>
+    </AbsoluteLayout>
+</ContentPage>
