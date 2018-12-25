@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MeuPredio.Views;
+using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -10,8 +11,9 @@ namespace MeuPredio
         public App()
         {
             InitializeComponent();
+            LiveReload.Init();
 
-            MainPage = new MainPage();
+            MainPage = new MenuPage();
         }
 
         protected override void OnStart()
