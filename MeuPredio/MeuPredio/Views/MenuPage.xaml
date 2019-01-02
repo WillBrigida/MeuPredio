@@ -76,7 +76,7 @@
                         <local:EventToCommandBehavior
                                 
                                 EventName="ItemSelected" 
-                                Command="{Binding NavigationCommand, Mode=TwoWay}"
+                                Command="{Binding NavegacaoMenuCommand, Mode=TwoWay}"
                                 Converter="{StaticResource SelectedItemConverter}" />
                     </ListView.Behaviors>
                     <!-- ################ FIM  Behaviors ##############-->
@@ -115,7 +115,7 @@
 
                 </ListView>
 
-                <!-- ############ FIM  LISTA MENU ##############-->
+                <!-- ############ FIM LISTA MENU ###############-->
                 <!-- ###########################################-->
                 <!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
                 <!-- ###########################################-->
@@ -133,11 +133,12 @@
                 <!-- ############# BOTÃO SAIR ##################-->
 
                 <Grid
+                    BackgroundColor="White"
                     RowSpacing="50"
                     HeightRequest="50"
                     Margin="20,0,0,10">
                     
-                    <Grid.GestureRecognizers>
+                    <Grid.GestureRecognizers >
                         <TapGestureRecognizer Command="{Binding SairCommand}"/>
                     </Grid.GestureRecognizers>
 
@@ -154,7 +155,7 @@
                     <Label 
                         TextColor="Black"
                         Text="Sair" 
-                        FontSize="16" 
+                        FontSize="17" 
                         Grid.Column="1" />
 
                 </Grid>

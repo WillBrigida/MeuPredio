@@ -1,0 +1,157 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage 
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="MeuPredio.Views.ListaFuncionariosPage"
+    xmlns:local="clr-namespace:MeuPredio.Helpers.Behaviors"
+    Title="Lista de Funcionários">
+
+
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <local:SelectedItemEventArgsToSelectedItemConverter x:Key="SelectedItemConverter" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    
+    
+    <ContentPage.Content>
+
+
+
+        <StackLayout>
+            <!--<StackLayout
+                HorizontalOptions="Center"
+                HeightRequest="40"
+                BackgroundColor="#e0e0e0">
+                <Grid
+                    Margin="20,0,0,0"
+                    VerticalOptions="Center">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+
+                    <Label
+                        Margin="5"
+                        VerticalOptions="Center"
+                        TextColor="Green"
+                        Grid.Column="0"
+                        FontSize="10"
+                        Text="&#xf111;"
+                        Style="{StaticResource MainMenuIconsStyle}"/>
+
+                    <Label
+                        Margin="25,0"
+                        VerticalOptions="Center"
+                        HorizontalOptions="Start"
+                        FontSize="10"
+                        Text="Em serviço"/>
+
+                    <Label
+                        Margin="5"
+                        VerticalOptions="Center"
+                        TextColor="Orange"
+                        Grid.Column="1"
+                        FontSize="10"
+                        Text="&#xf111;"
+                        Style="{StaticResource MainMenuIconsStyle}"/>
+
+                    <Label
+                        Margin="25,0"
+                        VerticalOptions="Center"
+                        HorizontalOptions="Start"
+                        
+                        FontSize="10"
+                        Grid.Column="1"
+                        Text="Folga"/>
+
+                    <Label
+                        Margin="5"
+                        VerticalOptions="Center"
+                        TextColor="Red"
+                        Grid.Column="2"
+                        FontSize="10"
+                        Text="&#xf111;"
+                        Style="{StaticResource MainMenuIconsStyle}"/>
+
+                    <Label
+                         Margin="25,0"
+                        VerticalOptions="Center"
+                        HorizontalOptions="Start"
+                        FontSize="10"
+                        Grid.Column="2"
+                        Text="Férias"/>
+                </Grid>
+            </StackLayout>-->
+            <ListView
+                CachingStrategy ="RecycleElement"
+                SeparatorVisibility="None"
+                HasUnevenRows="True"  
+                IsRefreshing="{Binding IsRunning}"
+                IsVisible="True"
+                ItemsSource="{Binding ListaFuncionarios}">
+
+                
+                <!-- ###########################################-->
+                <!-- ################  Behaviors ##################-->
+                <ListView.Behaviors>
+                    <local:EventToCommandBehavior
+                                
+                                EventName="ItemSelected" 
+                                Command="{Binding NavigationCommand, Mode=TwoWay}"
+                                Converter="{StaticResource SelectedItemConverter}" />
+                </ListView.Behaviors>
+                <!-- ################ FIM  Behaviors ##############-->
+                <!-- ###########################################-->
+
+                <!-- HasUnevenRows  true - tamanho de acordo com a quantidade. false - um linha apenas-->
+                
+
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Frame
+                                BackgroundColor="White"
+                                Margin="5">
+                                <StackLayout
+                                Margin="5">
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="35"/>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="20"/>
+                                        </Grid.ColumnDefinitions>
+
+                                        <Label
+                                            Grid.Column="0"
+                                            Text="&#xf500;"
+                                            Style="{StaticResource MainMenuIconsStyle}"/>
+                                        
+                                        <Label
+                                            Margin="5,0"
+                                            HorizontalOptions="StartAndExpand"
+                                            Grid.Column="1"
+                                            Text="{Binding NomePessoa }"/>
+
+                                        <!--<Label
+                                            Grid.Column="2"
+                                            Margin="5"
+                                            TextColor="Green"
+                                            VerticalOptions="Start"
+                                            FontSize="10"
+                                            Text="&#xf111;"
+                                            Style="{StaticResource MainMenuIconsStyle}"/>-->
+                                    </Grid>
+                                </StackLayout>
+                            </Frame>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

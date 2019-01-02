@@ -1,15 +1,28 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage 
+<TabbedPage 
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:tabs="clr-namespace:MeuPredio.Views"
     x:Class="MeuPredio.Views.ReclamacoesPage"
-    Title="Reclamações">
+    Title="Reclamações"
+    xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
+    android:TabbedPage.ToolbarPlacement="Bottom"
+    android:TabbedPage.BarItemColor="#66FFFFFF"
+    android:TabbedPage.BarSelectedItemColor="White"
     
+    BarBackgroundColor="#2196F3"
+             BarTextColor="White">
+
+
+    <!--<TabbedPage.ToolbarItems>
+        <ToolbarItem 
+            Text="{Binding Contador}"/>
+    </TabbedPage.ToolbarItems>-->
+
+
+
+    <tabs:AbrirReclamacoesPage Title="Abrir" Icon="iconData.png"/>
+
+    <tabs:ListaReclamacoesPage Title="Lista" Icon="iconData.png"/>
     
-    
-    <ContentPage.Content>
-        <StackLayout>
-           
-        </StackLayout>
-    </ContentPage.Content>
-</ContentPage>
+</TabbedPage>

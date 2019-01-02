@@ -1,15 +1,17 @@
-﻿using System;
-
+﻿
 using Android.App;
 using Android.Content.PM;
-using Android.Runtime;
-using Android.Views;
-using Android.Widget;
 using Android.OS;
 
 namespace MeuPredio.Droid
 {
-    [Activity(Label = "MeuPredio", Icon = "@mipmap/icon", Theme = "@style/MainTheme", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
+    [Activity(
+        Label = "MeuPredio", 
+        Icon = "@mipmap/icon", 
+        Theme = "@style/MainTheme", 
+        ScreenOrientation = ScreenOrientation.Portrait)] // Sem rotação de tela
+        //ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
+
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
     {
         protected override void OnCreate(Bundle savedInstanceState)

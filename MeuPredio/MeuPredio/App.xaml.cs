@@ -18,17 +18,17 @@ namespace MeuPredio
 
         protected override void OnStart()
         {
-            // Handle when your app starts
+            App.Current.MainPage.DisplayAlert("","OnStart","Ok");
         }
 
         protected override void OnSleep()
         {
-            // Handle when your app sleeps
+            App.Current.MainPage.DisplayAlert("", "OnSleep", "Ok");
         }
 
         protected override void OnResume()
         {
-            // Handle when your app resumes
+            App.Current.MainPage.DisplayAlert("", "OnResume", "Ok");
         }
     }
 }

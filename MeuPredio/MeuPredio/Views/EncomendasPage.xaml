@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MeuPredio.Views.EncomendasPage"
+             BackgroundColor="White"
+             Title="Encomenda">
+    <ContentPage.Content>
+        <StackLayout
+            Margin="0,-100,0,0"
+            VerticalOptions="Center"
+            HorizontalOptions="Center">
+            <Label
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                FontSize="200"
+                Text="&#xf466;"
+                TextColor="#f6f6f6"
+                Style="{StaticResource MainMenuIconsStyle}"/>
+
+
+            <Label 
+                HorizontalOptions="CenterAndExpand"
+                Text="Não há nenhuma encomenda pra você"/>
+            
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

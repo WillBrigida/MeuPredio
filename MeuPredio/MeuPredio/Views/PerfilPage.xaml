@@ -1,0 +1,234 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage 
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="MeuPredio.Views.PerfilPage"
+    Title="Perfil"
+    BackgroundColor="White"
+    xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin">
+
+
+
+
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <Grid
+                    RowSpacing="-20">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+
+                    <!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
+                    <!-- ###########################################-->
+                    <!-- #############  IMAGEM PERFIL ##############-->
+                    
+                    <StackLayout
+                        Grid.Row="0"
+                        Margin="30,0">
+                        <Grid
+
+                            VerticalOptions="Center">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="20"/>
+                                <RowDefinition Height="23"/>
+                                <RowDefinition Height="30"/>
+                                <RowDefinition Height="*"/>
+                            </Grid.RowDefinitions>
+                           
+
+
+                            <Label
+                            Grid.Row="1"
+                            TextColor="Black"
+                            HorizontalOptions="Center"
+                            FontSize="20"
+                            FontAttributes="Bold"
+                            Text="{Binding Nome, Mode=TwoWay}"/>
+
+
+                            <Label
+                            Grid.Row="2"
+                            TextColor="gray"
+                            HorizontalOptions="Center"
+                            FontSize="14"
+                            FontAttributes="None"
+                            Text="{Binding Funcao}"/>
+
+
+                            <controls:CircleImage
+                            Margin="0,-5,0,0"
+                            Grid.Row="3"
+                            BorderColor="Black"
+                            BorderThickness="1" 
+                            Source="wb.png" 
+                            WidthRequest="100" 
+                            HeightRequest="100" />
+                        </Grid>
+
+
+                        <BoxView 
+                        Margin="10,20,0,0"
+                            VerticalOptions="EndAndExpand"
+                            HeightRequest="0.4" BackgroundColor="Gray" />
+                    </StackLayout>
+
+                    <!-- ############# FIM IMAGEM PERFIL ##########-->
+                    <!-- ###########################################-->
+                    <!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
+                    <!-- ###########################################-->
+                    <!-- #############  TELEFONES ##############-->
+
+
+                    <StackLayout
+                        VerticalOptions="FillAndExpand"
+                        Margin="40"
+                        Grid.Row="1">
+
+
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                
+                                <RowDefinition Height="50"/>
+                                <RowDefinition Height="50"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="50"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+
+                            
+
+                            <Label
+                            Grid.Column="1"
+                            TextColor="Black"
+                            FontSize="16"
+                            Text="{Binding Telefone}"/>
+
+                            <Label
+                            Margin="0,25,0,0"
+                            Grid.Column="1"
+                            FontSize="14"
+                            TextColor="gray"
+                            Text="Fixo"/>
+
+                            <Label
+                            Grid.Column="1"
+                            Grid.Row="1"
+                            TextColor="Black"
+                            FontSize="16"
+                            Text="(21) 98119-5352"/>
+
+                            <Label
+                            Margin="0,25,0,0"
+                            Grid.Column="1"
+                            Grid.Row="1"
+                            FontSize="14"
+                            TextColor="gray"
+                            Text="Mobile"/>
+
+
+
+                            <!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
+                            <!-- #############  IMAGEM TELEFONE ############-->
+
+                            <Label  
+                            Grid.Column="0"
+                            FontSize="Medium"
+                            Text="&#xf095;"
+                            TextColor="#49a4aa"
+                            Style="{StaticResource MainMenuIconsStyle}"/>
+
+                            <!-- ############# FIM IMAGEM TELEFONE  ##########-->
+                            <!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
+
+                        </Grid>
+
+
+                        <BoxView 
+                        Margin="10,10,0,0"
+                            VerticalOptions="EndAndExpand"
+                            HeightRequest="0.4" BackgroundColor="Gray" />
+
+
+                    </StackLayout>
+
+                    <!-- ############# FIM TELEFONE ##########-->
+                    <!-- ###########################################-->
+                    <!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
+                    <!-- ###########################################-->
+                    <!-- #############  EMAIL ##############-->
+
+                    <StackLayout
+                        VerticalOptions="Center"
+                        Margin="40"
+                        Grid.Row="2">
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="50"/>
+                                <RowDefinition Height="50"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="50"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+
+                            <Label
+                            Grid.Column="1"
+                            TextColor="Black"
+                            FontSize="16"
+                            Text="{Binding Email}"/>
+
+                            <Label
+                            Margin="0,25,0,0"
+                            Grid.Column="1"
+                            FontSize="14"
+                            TextColor="gray"
+                            Text="Pessoal"/>
+
+                            <Label
+                            Grid.Column="1"
+                            Grid.Row="1"
+                            TextColor="Black"
+                            FontSize="16"
+                            Text="wbrigid@gmail.com"/>
+
+                            <Label
+                            Margin="0,25,0,0"
+                            Grid.Column="1"
+                            Grid.Row="1"
+                            FontSize="14"
+                            TextColor="gray"
+                            Text="Profissional"/>
+
+                            <!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
+                            <!-- #############  ICONE EMAIL ##############-->
+
+                            <Label  
+                            Grid.Column="0"
+                            FontSize="Medium"
+                            Text="&#xf0e0;"
+                            TextColor="#49a4aa"
+                            Style="{StaticResource MainMenuIconsStyle}"/>
+                            
+                            <!-- ############# FIM ICONE EMAIL ##########-->
+                            <!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
+
+                        </Grid>
+
+                    </StackLayout>
+
+                    <!-- ############# FIM EMAIL ##########-->
+                    <!-- ###########################################-->
+                    <!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
+
+
+                </Grid>
+
+            </StackLayout>
+        </ScrollView>
+
+    </ContentPage.Content>
+</ContentPage>

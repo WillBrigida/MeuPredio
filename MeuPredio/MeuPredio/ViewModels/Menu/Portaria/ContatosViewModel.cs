@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace MeuPredio.ViewModels
+namespace MeuPredio.ViewModels.Menu.Portaria
 {
-    public class ReclamacoesViewModel : BaseViewModel
+    public class ContatosViewModel : BaseViewModel
     {
         #region Propriedade
 

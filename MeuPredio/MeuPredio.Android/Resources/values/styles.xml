@@ -1,8 +1,30 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <resources>
-
-  <style name="MainTheme" parent="MainTheme.Base">
+  
+  <style name="SplashTheme" parent ="Theme.AppCompat.Light.NoActionBar">
+    <item name="android:windowBackground">@drawable/splash</item>
+    <item name="android:windowNoTitle">true</item>
+    <item name="android:windowFullscreen">true</item>
   </style>
+
+  <!--Cor da seleção da lista-->
+  <style name="MainTheme" parent="MainTheme.Base">
+    <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+    <!--<item name="android:windowTranslucentStatus">true</item>-->
+    <item name="android:colorPressedHighlight">@color/ListViewSelected</item>
+    <item name="android:colorLongPressedHighlight">@color/ListViewHighlighted</item>
+    <item name="android:colorFocusedHighlight">@color/ListViewSelected</item>
+    <item name="android:colorActivatedHighlight">@color/ListViewSelected</item>
+    <item name="android:activatedBackgroundIndicator">@color/ListViewSelected</item>
+  </style>
+  <color name="ListViewSelected">#f5f5f5</color>
+  <color name="ListViewHighlighted">#E39696</color>
+  <!--Fim cor da seleção da lista-->
+  
+
+    
+  
+  
   <!-- Base theme applied no matter what API -->
   <style name="MainTheme.Base" parent="Theme.AppCompat.Light.DarkActionBar">
     <!--If you are using revision 22.1 please use just windowNoTitle. Without android:-->
@@ -16,13 +38,15 @@
     <item name="colorPrimaryDark">#1976D2</item>
     <!-- colorAccent is used as the default value for colorControlActivated
          which is used to tint widgets -->
-    <item name="colorAccent">#FF4081</item>
+    <item name="colorAccent">#49a4aa</item>
     <!-- You can also set colorControlNormal, colorControlActivated
          colorControlHighlight and colorSwitchThumbNormal. -->
     <item name="windowActionModeOverlay">true</item>
 
     <item name="android:datePickerDialogTheme">@style/AppCompatDialogStyle</item>
   </style>
+  
+   
 
   <style name="AppCompatDialogStyle" parent="Theme.AppCompat.Light.Dialog">
     <item name="colorAccent">#FF4081</item>

@@ -1,20 +1,27 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using MeuPredio.ViewModels;
 using System.Threading.Tasks;
-
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 namespace MeuPredio.Views
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class PortariaPage : ContentPage
-	{
-		public PortariaPage ()
-		{
-			InitializeComponent ();
-		}
-	}
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class PortariaPage : ContentPage
+    {
+
+        private PortariaViewModel ViewModel => BindingContext as PortariaViewModel;
+        public PortariaPage()
+        {
+            InitializeComponent();
+            this.BindingContext = new PortariaViewModel();
+        }
+
+        protected override async void OnAppearing()
+        {
+            base.OnAppearing();
+            await ViewModel.LoadAsync();
+            
+        }
+    }
 }
+

@@ -11,12 +11,12 @@ using Xamarin.Forms.Xaml;
 namespace MeuPredio.Views
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class ReclamacoesPage : TabbedPage
-    {
-		public ReclamacoesPage ()
+	public partial class ListaFuncionariosPage : ContentPage
+	{
+		public ListaFuncionariosPage ()
 		{
 			InitializeComponent ();
-            this.BindingContext = new ReclamacoesViewModel();
+            this.BindingContext = new ListaFuncionariosViewModel();
 
         }
 	}

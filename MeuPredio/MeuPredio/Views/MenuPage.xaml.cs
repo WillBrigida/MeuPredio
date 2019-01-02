@@ -1,4 +1,5 @@
 ﻿using MeuPredio.ViewModels;
+using MeuPredio.ViewModels.Classes;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,14 +22,16 @@ namespace MeuPredio.Views
 
             Detail = new NavigationPage(new PortariaPage()); // Diferente do costume, a navegação é setada aqui e não no App.xaml.cs
             GoLogin();
+            this.IsPresented = true;
+
+            
         }
 
-        private void GoLogin()
+        private async void GoLogin()
         {
-
             if (contador == 0)
             {
-                Detail.Navigation.PushModalAsync(new LoginPage());
+                await Detail.Navigation.PushModalAsync(new LoginPage());
                 contador += 1;
             }
         }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MeuPredio.ViewModels.Classes;
+using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
@@ -47,18 +48,15 @@ namespace MeuPredio.ViewModels
         #endregion
 
         #region Métodos
-
         private async void OnLoginCommandExecute(object obj)
         {
+            
             var mdp = (Application.Current.MainPage as MasterDetailPage);
             var navPage = mdp.Detail as NavigationPage;
             IsRunning = true;
             await Task.Delay(2000);
-
-
             await App.Current.MainPage.Navigation.PopModalAsync();
             IsRunning = false;
-
         }
 
         #endregion

@@ -3,11 +3,13 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="MeuPredio.Views.LoginPage"
+    xmlns:controls="clr-namespace:MeuPredio.Controls"
     NavigationPage.HasNavigationBar="False">
 
 
 
     <AbsoluteLayout>
+      
 
         <!--<Image 
             x:Name="Logo" 
@@ -26,13 +28,21 @@
                     <RowDefinition Height="Auto"/>
                 </Grid.RowDefinitions>
 
-
+               
+                <!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
+                <!-- ###########################################-->
+                <!-- ################  IMAGEM ##################-->
+                
                 <Image
                     Grid.Row="1"
                     Source="logo"
                     HeightRequest="40"
                     WidthRequest="40"/>
 
+                <!-- ################ FIM  IMAGEM ##############-->
+                <!-- ###########################################-->
+                <!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
+               
 
 
                 <StackLayout
@@ -42,20 +52,34 @@
                     VerticalOptions="EndAndExpand"
                     HorizontalOptions="FillAndExpand">
 
-                    <Entry
+                    <!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
+                    <!-- ###########################################-->
+                    <!-- ############### LOGIN #####################-->
+
+                    <controls:CustomEntry
                         Margin="30,0"
                             VerticalOptions="Center"
                             Keyboard="Email"
                             Placeholder=" Login"
                             TextColor="Black"/>
 
+                    <!-- ################ FIM  LOGIN ###############-->
+                    <!-- ###########################################-->
+                    <!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
+                    <!-- ###########################################-->
+                    <!-- ############### SENHA #####################-->
 
 
-                    <Entry
+                    <controls:CustomEntry
                     Margin="30,0"
                             IsPassword="True"
                             Placeholder=" Senha"
                             TextColor="Black"/>
+
+                    <!-- ################ FIM  SENHA ###############-->
+                    <!-- ###########################################-->
+                    <!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
+                    
                     
                     <StackLayout>
                         <Grid
@@ -66,10 +90,16 @@
                                 <ColumnDefinition Width="*"/>
                             </Grid.ColumnDefinitions>
 
+                            <!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
+                            <!-- ###########################################-->
+                            <!-- ############### Switch ##############-->
+                            
                             <Switch
+                                IsToggled="{Binding LembrarSenha}"
                                 Margin="0,0"
                                 Grid.Column="0"
                                 HorizontalOptions="Center"/>
+
 
 
                             <Label
@@ -81,11 +111,18 @@
                                 FontSize="Small"
                                 Text="Lembrar minha senha"/>
 
+                            <!-- ############ FIM Switch ###################-->
+                            <!-- ###########################################-->
+                            <!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
+
 
                         </Grid>
                     </StackLayout>
 
-
+                    <!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
+                    <!-- ###########################################-->
+                    <!-- ############### BOTÃO LOGIN ##############-->
+                    
                     <Button 
                         Margin="0,20"
                         Text="entrar"
@@ -100,20 +137,30 @@
                         Command="{Binding LoginCommand}"  />
 
 
-
+                    <!-- ############### LOAD BOTÃO LOGIN ##############-->
                     <ActivityIndicator
-                        Margin="110,-48,0,0"
+                        Margin="150,-68,0,0"
                         HorizontalOptions="Center"
                         Color="White"
                         HeightRequest="25"
                         IsRunning="{Binding IsRunning}"/>
+                    <!-- ############### FIM LOAD BOTÃO LOGIN ##############-->
 
-                   
+
+                    <!-- ############ FIM BOTÃO LOGIN #############-->
+                    <!-- ###########################################-->
+                    <!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
+
+
 
                 </StackLayout>
             </Grid>
 
-
+            <!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
+            <!-- ###########################################-->
+            <!-- ############### ANIMAÇÃO ##############-->
+            
+            
             <!--<Grid IsVisible="{Binding IsVisible}"
             Margin="0,-1,0,0"
             VerticalOptions="FillAndExpand">
@@ -141,6 +188,11 @@
                 </Image>
             </Grid>
         </Grid>-->
+
+            <!-- ############ FIM ANIMAÇÃO #############-->
+            <!-- ###########################################-->
+            <!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
+
 
         </StackLayout>
     </AbsoluteLayout>

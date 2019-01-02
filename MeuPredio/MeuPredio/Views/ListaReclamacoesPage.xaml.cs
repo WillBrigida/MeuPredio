@@ -1,5 +1,4 @@
-﻿using MeuPredio.ViewModels;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,13 +10,11 @@ using Xamarin.Forms.Xaml;
 namespace MeuPredio.Views
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class ReclamacoesPage : TabbedPage
-    {
-		public ReclamacoesPage ()
+	public partial class ListaReclamacoesPage : ContentPage
+	{
+		public ListaReclamacoesPage ()
 		{
 			InitializeComponent ();
-            this.BindingContext = new ReclamacoesViewModel();
-
-        }
+		}
 	}
 }
