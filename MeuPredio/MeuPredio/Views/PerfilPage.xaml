@@ -63,7 +63,7 @@
                             Grid.Row="3"
                             BorderColor="Black"
                             BorderThickness="1" 
-                            Source="wb.png" 
+                            Source="{Binding Imagem}" 
                             WidthRequest="100" 
                             HeightRequest="100" />
                         </Grid>

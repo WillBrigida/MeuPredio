@@ -4,6 +4,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="MeuPredio.Views.LoginPage"
     xmlns:controls="clr-namespace:MeuPredio.Controls"
+    xmlns:xfx="clr-namespace:Xfx;assembly=Xfx.Controls" 
     NavigationPage.HasNavigationBar="False">
 
 
@@ -56,8 +57,9 @@
                     <!-- ###########################################-->
                     <!-- ############### LOGIN #####################-->
 
-                    <controls:CustomEntry
-                        Margin="30,0"
+                    
+                        <xfx:XfxEntry
+                        Margin="30,-20,30,0"
                             VerticalOptions="Center"
                             Keyboard="Email"
                             Placeholder=" Login"
@@ -70,8 +72,8 @@
                     <!-- ############### SENHA #####################-->
 
 
-                    <controls:CustomEntry
-                    Margin="30,0"
+                    <xfx:XfxEntry
+                    Margin="30,-30,30,0"
                             IsPassword="True"
                             Placeholder=" Senha"
                             TextColor="Black"/>

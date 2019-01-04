@@ -66,18 +66,19 @@ namespace MeuPredio.Services
                 case "Portaria":
                     mdp.Detail = new NavigationPage(new PortariaPage());
                     break;
-                case "Reclamações":
+                case "Livro de Reclamações":
                     mdp.Detail = new NavigationPage(new ReclamacoesPage());
                     break;
-                case "Informações":
+                case "Avisos":
                     mdp.Detail = new NavigationPage(new InformacoesPage());
                     break;
-                case "Atendimentos":
+                case "Reparos / Obras":
                     mdp.Detail = new NavigationPage(new AtendimentosPage());
                     break;
-                case "Scanner":
-                    mdp.Detail = new NavigationPage(new ScannerPage());
+                case "Balancetes":
+                    mdp.Detail = new NavigationPage(new BalancetesPage());
                     break;
+
 
             }
         }

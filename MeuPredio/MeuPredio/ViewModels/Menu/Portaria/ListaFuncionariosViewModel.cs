@@ -55,8 +55,17 @@ namespace MeuPredio.ViewModels
             set { SetProperty(ref _email, value); }
         }
 
+        private string _imagem;
+
+        public string Imagem
+        {
+            get { return _imagem; }
+            set { SetProperty(ref _imagem, value); }
+        }
+
 
         static string nome = "";
+        static string imagem = "";
         static string sobrenome = "";
         static string funcao = "";
         static string telefone = "";
@@ -82,6 +91,7 @@ namespace MeuPredio.ViewModels
             this.Funcao = funcao;
             this.Telefone = telefone;
             this.Email = email;
+            this.Imagem = imagem;
         }
 
         #endregion
@@ -94,28 +104,28 @@ namespace MeuPredio.ViewModels
            {
                new Funcionarios{ NomePessoa = "José", SobrenomePessoa = "da Silva Bertoldo",
               TelefonePessoa = "(21)98115-5225", Descricao = "Funcionário responsável por...",
-             FuncaoFuncionario = "Porteiro", EmailPessoa = "jose_silva@gmail.com"},
+             FuncaoFuncionario = "Porteiro", EmailPessoa = "jose_silva@gmail.com", Imagem = "port1"},
                 new Funcionarios{ NomePessoa = "Marcos", SobrenomePessoa = "Ferraz",
               TelefonePessoa = "(21)98115-5225", Descricao = "Funcionário responsável por...",
-             FuncaoFuncionario = "Zelador", EmailPessoa = "jose_silva@gmail.com"},
+             FuncaoFuncionario = "Zelador", EmailPessoa = "jose_silva@gmail.com", Imagem = "port2"},
                  new Funcionarios{ NomePessoa = "Fernando", SobrenomePessoa = "da Silva Bertoldo",
               TelefonePessoa = "(21)98115-5225", Descricao = "Funcionário responsável por...",
-             FuncaoFuncionario = "Servente Geral", EmailPessoa = "jose_silva@gmail.com"},
+             FuncaoFuncionario = "Servente Geral", EmailPessoa = "jose_silva@gmail.com", Imagem = "port4"},
                   new Funcionarios{ NomePessoa = "Claudio", SobrenomePessoa = "da Silva Bertoldo",
               TelefonePessoa = "(21)98115-5225", Descricao = "Funcionário responsável por...",
-             FuncaoFuncionario = "Porteiro Chefe", EmailPessoa = "jose_silva@gmail.com"},
+             FuncaoFuncionario = "Porteiro Chefe", EmailPessoa = "jose_silva@gmail.com", Imagem = "port1"},
                    new Funcionarios{ NomePessoa = "Antonio", SobrenomePessoa = "de Jesus",
               TelefonePessoa = "(21)98115-5225", Descricao = "Funcionário responsável por...",
-             FuncaoFuncionario = "Plantonista", EmailPessoa = "jose_silva@gmail.com"},
+             FuncaoFuncionario = "Plantonista", EmailPessoa = "jose_silva@gmail.com", Imagem = "port2"},
                     new Funcionarios{ NomePessoa = "Fátima", SobrenomePessoa = "da Silva Bertoldo",
               TelefonePessoa = "(21)98115-5225", Descricao = "Funcionário responsável por...",
-             FuncaoFuncionario = "Porteiro", EmailPessoa = "jose_silva@gmail.com"},
+             FuncaoFuncionario = "Porteiro", EmailPessoa = "jose_silva@gmail.com", Imagem = "port3"},
                      new Funcionarios{ NomePessoa = "Renato", SobrenomePessoa = "da Silva Bertoldo",
               TelefonePessoa = "(21)98115-5225", Descricao = "Funcionário responsável por...",
-             FuncaoFuncionario = "Porteiro", EmailPessoa = "jose_silva@gmail.com"},
+             FuncaoFuncionario = "Porteiro", EmailPessoa = "jose_silva@gmail.com", Imagem = "port4"},
                      new Funcionarios{ NomePessoa = "Wander", SobrenomePessoa = "Conceição",
               TelefonePessoa = "(21)98115-5225", Descricao = "Funcionário responsável por...",
-             FuncaoFuncionario = "Sindico", EmailPessoa = "wander@gmail.com"},
+             FuncaoFuncionario = "Sindico", EmailPessoa = "wander@gmail.com", Imagem = "port1"},
 
            };
         
@@ -130,6 +140,7 @@ namespace MeuPredio.ViewModels
             sobrenome = funcionarios.SobrenomePessoa;
             telefone = funcionarios.TelefonePessoa;
             email = funcionarios.EmailPessoa;
+            imagem = funcionarios.Imagem;
             contador = 0;
             Init();
 

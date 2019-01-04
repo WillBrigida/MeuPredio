@@ -29,7 +29,8 @@ namespace MeuPredio.ViewModels
         public ICommand EncomendasCommand { get { return new Command(OnEncomendasExecute); } }
         public ICommand SindicoCommand { get { return new Command(OnSindicoExecute); } }
         public ICommand RegrasCommand { get { return new Command(OnRegrasExecute); } }
-        public ICommand OcorrenciasCommand { get { return new Command(OnOcorrenciasExecute); } }
+        public ICommand AvisosCommand { get { return new Command(OnAvisosExecute); } }
+
         public ICommand ContatosCommand { get { return new Command(OnContatosExecute); } }
 
         #endregion
@@ -78,6 +79,11 @@ namespace MeuPredio.ViewModels
         private async void OnContatosExecute(object obj)
         {
             await Navigation.PushAsync<ContatosViewModel>(false);
+        }
+
+        private async void OnAvisosExecute(object obj)
+        {
+            await Navigation.PushAsync<AvisosViewModel>(false);
         }
 
         #endregion

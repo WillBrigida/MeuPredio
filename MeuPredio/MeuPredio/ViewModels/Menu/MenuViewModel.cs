@@ -29,10 +29,11 @@ namespace MeuPredio.ViewModels
             ListaMenu = new ObservableCollection<Classes.MenuItem>
             {
                 new Classes.MenuItem (FontAwesome.Building, "Portaria", "#49a4aa"),
-                new Classes.MenuItem (FontAwesome.ExclamationCircle, "Reclamações", "#962424"),
-                new Classes.MenuItem (FontAwesome.InfoCircle, "Informações", "#7a97cc"),
-                new Classes.MenuItem (FontAwesome.Briefcase,  "Atendimentos", "#e1c27f"),
-                new Classes.MenuItem (FontAwesome.Barcode,  "Scanner", "#000000"),
+                new Classes.MenuItem (FontAwesome.Book, "Livro de Reclamações", "#962424"),
+                new Classes.MenuItem (FontAwesome.InfoCircle, "Avisos", "#7a97cc"),
+                new Classes.MenuItem (FontAwesome.Briefcase,  "Reparos / Obras", "#e1c27f"),
+                new Classes.MenuItem (FontAwesome.Calculator,  "Balancetes", "#000000"),
+               // new Classes.MenuItem (FontAwesome.Barcode,  "Scanner", "#000000"),
             };
         }
 

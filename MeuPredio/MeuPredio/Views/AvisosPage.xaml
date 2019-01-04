@@ -2,12 +2,14 @@
 <ContentPage 
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    x:Class="MeuPredio.Views.EncomendasPage"
+    x:Class="MeuPredio.Views.AvisosPage"
     BackgroundColor="White"
-    Title="Encomenda">
+    Title="Avisos">
+    
     
     <ContentPage.Content>
         <StackLayout
+            BackgroundColor="White"
             Margin="0,-100,0,0"
             VerticalOptions="Center"
             HorizontalOptions="Center">
@@ -15,16 +17,16 @@
                 HorizontalOptions="Center"
                 VerticalOptions="Center"
                 FontSize="200"
-                Text="&#xf466;"
+                Text="&#xf071;"
                 TextColor="#f6f6f6"
                 Style="{StaticResource MainMenuIconsStyle}"/>
 
 
             <Label 
                 HorizontalOptions="CenterAndExpand"
-                Text="Não há nenhuma encomenda pra você"/>
-            
-            
+                Text="Não há avisos pra você"/>
+
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

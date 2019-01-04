@@ -4,7 +4,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:tabs="clr-namespace:MeuPredio.Views"
     x:Class="MeuPredio.Views.ReclamacoesPage"
-    Title="Reclamações"
+    Title="Livro de Reclamações"
     xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
     android:TabbedPage.ToolbarPlacement="Bottom"
     android:TabbedPage.BarItemColor="#66FFFFFF"
@@ -21,8 +21,8 @@
 
 
 
-    <tabs:AbrirReclamacoesPage Title="Abrir" Icon="iconData.png"/>
+    <tabs:AbrirReclamacoesPage Title="Sugestões" Icon="iconData.png"/>
 
-    <tabs:ListaReclamacoesPage Title="Lista" Icon="iconData.png"/>
+    <tabs:ListaReclamacoesPage Title="Reclamações" Icon="iconData.png"/>
     
 </TabbedPage>

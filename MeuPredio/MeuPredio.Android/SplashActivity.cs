@@ -5,8 +5,8 @@ using Android.OS;
 namespace MeuPredio.Droid
 {
     [Activity(Label =
-        "CondominioSmart",
-        Icon = "@mipmap/icon",
+        "Meu Prédio",
+        Icon = "@mipmap/logo",
         NoHistory = true,
         Theme = "@style/SplashTheme",
         MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]

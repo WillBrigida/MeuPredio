@@ -65,9 +65,9 @@
                 Grid.Column="1"
                 Grid.Row="1"
                 FontSize="35"
-                TextColor="#000000"
-                Text="&#xf518;"
-                Command="{Binding OcorrenciasCommand}"
+                TextColor="Orange"
+                Text="&#xf071;"
+                Command="{Binding AvisosCommand}"
                 Style="{StaticResource MainMenuIconsStyle}"/>
 
 
@@ -77,7 +77,7 @@
                 Grid.Column="1"
                 FontSize="12"
                 Grid.Row="2"
-                Text="Ocorrências"/>
+                Text="Avisos"/>
 
 
 
@@ -102,7 +102,7 @@
             </Label>
 
 
-            <Button
+            <!--<Button
                 Padding="0,30"
                 BackgroundColor="White"
                 Grid.Column="0"
@@ -170,7 +170,7 @@
                 Grid.Row="4"
                 Text="Regras">
                
-            </Label>
+            </Label>-->
 
          
 

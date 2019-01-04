@@ -2,6 +2,7 @@
 using Android.App;
 using Android.Content.PM;
 using Android.OS;
+using Xfx;
 
 namespace MeuPredio.Droid
 {
@@ -18,6 +19,7 @@ namespace MeuPredio.Droid
         {
             TabLayoutResource = Resource.Layout.Tabbar;
             ToolbarResource = Resource.Layout.Toolbar;
+            XfxControls.Init();
 
             base.OnCreate(savedInstanceState);
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
