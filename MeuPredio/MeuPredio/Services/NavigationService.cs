@@ -56,7 +56,7 @@ namespace MeuPredio.Services
             await (page.BindingContext as BaseViewModel).LoadAsync(args);
         }
 
-        public void NavigateMenu(string titulo)
+        public async void NavigateMenu(string titulo)
         {
             var mdp = (Application.Current.MainPage as MasterDetailPage);
             var navPage = mdp.Detail as NavigationPage;
@@ -64,7 +64,7 @@ namespace MeuPredio.Services
             switch (titulo)
             {
                 case "Portaria":
-                    mdp.Detail = new NavigationPage(new PortariaPage());
+                    mdp.Detail = new  NavigationPage(new PortariaPage());
                     break;
                 case "Livro de Reclamações":
                     mdp.Detail = new NavigationPage(new ReclamacoesPage());

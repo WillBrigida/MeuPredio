@@ -4,9 +4,8 @@
              x:Class="MeuPredio.Views.ListaReclamacoesPage">
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <Button
+                Command="{Binding NovaReclamacaoCommand}"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

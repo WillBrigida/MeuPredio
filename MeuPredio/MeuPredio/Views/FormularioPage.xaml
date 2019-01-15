@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage 
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:controls="clr-namespace:MeuPredio.Controls"
+     x:Class="MeuPredio.Views.FormularioPage"
+    Title="{Binding Title}">
+    
+    
+    <ContentPage.Content>
+        <StackLayout
+            Margin="10">
+
+            <controls:CustomPicker
+                ItemsSource="{Binding ListaTipo, Mode=TwoWay}"
+                ItemDisplayBinding="{Binding ListaEnum, Mode=TwoWay}"
+                Title="Tipo"/>
+
+
+
+            <controls:CustomEntry
+                Text="{Binding Titulo}"
+                Placeholder="Titulo"/>
+
+
+
+            <controls:CustomEditor
+                Text="{Binding Descricao}"
+                Placeholder="{Binding Placeholder}"
+                VerticalOptions="FillAndExpand"/>
+
+
+            
+
+            <Button 
+                        Text="Salvar"
+                        FontSize="14"
+                        BackgroundColor="#49a4aa"
+                        CornerRadius="24"
+                        TextColor="White"
+                        HorizontalOptions="FillAndExpand"
+                        Command="{Binding SalvarCommand}"  />
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -9,6 +9,8 @@ namespace MeuPredio.Models
         public string FuncaoFuncionario { get; set; }
         public string Descricao { get; set; }
         public string Imagem { get; set; }
+        public string Status { get; set; }
+
 
         public Funcionarios() 
         {

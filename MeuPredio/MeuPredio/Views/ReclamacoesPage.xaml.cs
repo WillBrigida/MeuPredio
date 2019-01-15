@@ -1,23 +1,23 @@
 ﻿using MeuPredio.ViewModels;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 namespace MeuPredio.Views
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
+    [XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class ReclamacoesPage : TabbedPage
     {
-		public ReclamacoesPage ()
+        ReclamacoesViewModel ViewModel => BindingContext as ReclamacoesViewModel;
+
+        public ReclamacoesPage ()
 		{
 			InitializeComponent ();
-            this.BindingContext = new ReclamacoesViewModel();
-
         }
-	}
+
+        protected override void OnAppearing()
+        {
+            base.OnAppearing();
+            ViewModel.LoadAsync();
+        }
+    }
 }

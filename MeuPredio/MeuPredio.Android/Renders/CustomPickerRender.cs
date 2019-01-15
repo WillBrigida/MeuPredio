@@ -5,32 +5,28 @@ using MeuPredio.Droid.Renders;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Android;
 
-[assembly: ExportRenderer(typeof(CustomEntry), typeof(CustomEntryRenderer))]
+[assembly: ExportRenderer(typeof(CustomPicker), typeof(CustomPickerRender))]
+
+
 namespace MeuPredio.Droid.Renders
 {
-    public class CustomEntryRenderer : EntryRenderer
+    public class CustomPickerRender : PickerRenderer
     {
-        public CustomEntryRenderer(Context context) : base(context)
-        {
-        }
-
-        protected override void OnElementChanged(ElementChangedEventArgs<Entry> e)
+        protected override void OnElementChanged(ElementChangedEventArgs<Picker> e)
         {
             base.OnElementChanged(e);
 
             if (Control != null && e.NewElement != null)
             {
-                BorderLessBotton();
-                BorderEntry();
+                BorderPicker();
             }
         }
 
-        private void BorderLessBotton()
+        public CustomPickerRender(Context context) : base(context)
         {
-            Control.Background = new ColorDrawable(Android.Graphics.Color.WhiteSmoke);
         }
-
-        private void BorderEntry()
+        
+        private void BorderPicker()
         {
             GradientDrawable gd = new GradientDrawable();
             gd.SetColor(Android.Graphics.Color.White);

@@ -30,7 +30,7 @@ namespace MeuPredio.ViewModels
         public ICommand SindicoCommand { get { return new Command(OnSindicoExecute); } }
         public ICommand RegrasCommand { get { return new Command(OnRegrasExecute); } }
         public ICommand AvisosCommand { get { return new Command(OnAvisosExecute); } }
-
+        public ICommand ReclamacoesCommand { get { return new Command(OnReclamacoesExecute); } }
         public ICommand ContatosCommand { get { return new Command(OnContatosExecute); } }
 
         #endregion
@@ -68,7 +68,7 @@ namespace MeuPredio.ViewModels
 
             await navPae.PushAsync(new PerfilPage());
         }
-        
+
 
         private async void OnRegrasExecute(object obj)
         {
@@ -86,6 +86,13 @@ namespace MeuPredio.ViewModels
             await Navigation.PushAsync<AvisosViewModel>(false);
         }
 
+        private async void OnReclamacoesExecute(object obj)
+        {
+            await Navigation.PushAsync<ReclamacoesViewModel>(false);
+        }
+
+
         #endregion
     }
 }
+

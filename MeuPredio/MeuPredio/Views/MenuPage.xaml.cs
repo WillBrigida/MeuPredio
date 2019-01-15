@@ -22,9 +22,7 @@ namespace MeuPredio.Views
 
             Detail = new NavigationPage(new PortariaPage()); // Diferente do costume, a navegação é setada aqui e não no App.xaml.cs
             GoLogin();
-            this.IsPresented = true;
 
-            
         }
 
         private async void GoLogin()
@@ -35,5 +33,7 @@ namespace MeuPredio.Views
                 contador += 1;
             }
         }
+
+     
     }
 }

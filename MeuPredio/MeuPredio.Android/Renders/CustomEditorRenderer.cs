@@ -28,7 +28,7 @@ namespace MeuPredio.Droid.Renders
 
         private void BorderLessBotton()
         {
-            Control.Background = new ColorDrawable(Android.Graphics.Color.Transparent);
+            Control.Background = new ColorDrawable(Android.Graphics.Color.WhiteSmoke);
         }
 
         private void BorderEditor()

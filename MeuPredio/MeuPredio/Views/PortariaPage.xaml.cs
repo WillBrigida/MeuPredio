@@ -20,8 +20,15 @@ namespace MeuPredio.Views
         {
             base.OnAppearing();
             await ViewModel.LoadAsync();
-            
+
         }
+
+        //protected override async void OnDisappearing()
+        //{
+        //    base.OnDisappearing();
+        //    await ViewModel.LoadAsync();
+        //}
+
     }
 }
 

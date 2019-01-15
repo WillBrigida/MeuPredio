@@ -8,7 +8,11 @@
     xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin">
 
 
-
+    <ContentPage.ToolbarItems>
+        <ToolbarItem 
+            Icon="baseline_more_vert_white_24.png"
+            Command="{Binding MoreCommand}"/>
+    </ContentPage.ToolbarItems>
 
     <ContentPage.Content>
         <ScrollView>
@@ -29,7 +33,7 @@
                         Grid.Row="0"
                         Margin="30,0">
                         <Grid
-
+                            HorizontalOptions="Center"
                             VerticalOptions="Center">
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="20"/>
@@ -53,7 +57,7 @@
                             Grid.Row="2"
                             TextColor="gray"
                             HorizontalOptions="Center"
-                            FontSize="14"
+                            FontSize="15"
                             FontAttributes="None"
                             Text="{Binding Funcao}"/>
 
@@ -61,12 +65,19 @@
                             <controls:CircleImage
                             Margin="0,-5,0,0"
                             Grid.Row="3"
-                            BorderColor="Black"
-                            BorderThickness="1" 
+                            BorderColor="#65B980"
+                            BorderThickness="3" 
                             Source="{Binding Imagem}" 
                             WidthRequest="100" 
                             HeightRequest="100" />
                         </Grid>
+
+                        <Label
+                            FontSize="15"
+                            FontAttributes="Bold"
+                            HorizontalOptions="Center"
+                            Text="{Binding Status}"
+                            TextColor="{Binding Color}"/>
 
 
                         <BoxView 
@@ -119,7 +130,7 @@
                             Grid.Row="1"
                             TextColor="Black"
                             FontSize="16"
-                            Text="(21) 98119-5352"/>
+                            Text="(21) 95555-5555"/>
 
                             <Label
                             Margin="0,25,0,0"

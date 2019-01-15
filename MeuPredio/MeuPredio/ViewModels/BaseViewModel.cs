@@ -98,7 +98,21 @@ namespace MeuPredio.ViewModels
             set { SetProperty(ref color, value); }
         }
 
+        private string _title;
 
+        public string Title
+        {
+            get { return _title; }
+            set { SetProperty(ref _title, value); }
+        }
+
+        private string _placeholder;
+
+        public string Placeholder
+        {
+            get { return _placeholder; }
+            set { SetProperty(ref _placeholder, value); }
+        }
 
         #endregion
         public virtual Task LoadAsync(object[] args) => Task.FromResult(true);

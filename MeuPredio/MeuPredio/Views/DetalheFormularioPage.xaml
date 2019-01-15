@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pages:PopupPage 
+ xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+              xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+             x:Class="MeuPredio.Views.DetalheFormularioPage">
+    
+    
+    <ContentPage.Content>
+        <StackLayout
+            Margin="20"
+            BackgroundColor="White">
+            <!--<Label
+                Text="jkllk"/>
+
+            <Label
+                Text="{Binding FormularioViewModel.Descricao, Mode=TwoWay}"/>
+
+            <Picker
+                ItemsSource="{Binding ListaTipo, Mode=TwoWay}"
+                ItemDisplayBinding="{Binding ListaEnum, Mode=TwoWay}"
+                Title="Tipo">
+
+            </Picker>-->
+            
+             <ListView
+                VerticalOptions="Start"
+                    SeparatorVisibility="None"
+                    ItemsSource="{Binding ListaReclamacao, Mode=TwoWay}"
+                    HasUnevenRows="False">
+
+            <!-- ###########################################-->
+            <!-- ################  Behaviors ##################-->
+            <!--<ListView.Behaviors>
+                <local:EventToCommandBehavior
+                                
+                                EventName="ItemSelected" 
+                                Command="{Binding NavegacaoMenuCommand, Mode=TwoWay}"
+                                Converter="{StaticResource SelectedItemConverter}" />
+            </ListView.Behaviors>-->
+            <!-- ################ FIM  Behaviors ##############-->
+            <!-- ###########################################-->
+
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid
+                                    Padding="20,0" >
+
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="30"/>
+                                <ColumnDefinition Width="*"/>
+                            </Grid.ColumnDefinitions>
+
+
+                            <Label
+                                        Text="{Binding Titulo}"/>
+
+
+                            <Label
+                                      
+                                        Text="{Binding Descricao}"/>
+
+
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+
+        </ListView>
+
+
+        </StackLayout>
+    </ContentPage.Content>
+</pages:PopupPage>

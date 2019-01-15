@@ -1,5 +1,4 @@
-﻿using MeuPredio.ViewModels.Menu.Reclamacoes;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,13 +10,11 @@ using Xamarin.Forms.Xaml;
 namespace MeuPredio.Views
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class ListaReclamacoesPage : ContentPage
+	public partial class PopUpMorePage 
 	{
-		public ListaReclamacoesPage ()
+		public PopUpMorePage ()
 		{
 			InitializeComponent ();
-            this.BindingContext = new ListaReclamacoesViewModel();
-
-        }
+		}
 	}
 }
