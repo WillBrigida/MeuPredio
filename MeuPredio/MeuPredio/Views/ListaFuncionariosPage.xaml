@@ -11,6 +11,7 @@
     <ContentPage.Resources>
         <ResourceDictionary>
             <local:SelectedItemEventArgsToSelectedItemConverter x:Key="SelectedItemConverter" />
+            <local:ItemTappedEventArgsToItemTappedConverter x:Key="ItemTappedConverter" />
         </ResourceDictionary>
     </ContentPage.Resources>
 
@@ -92,6 +93,7 @@
                 HasUnevenRows="True"  
                 IsRefreshing="{Binding IsRunning}"
                 IsVisible="True"
+                SelectionMode="None"
                 ItemsSource="{Binding ListaFuncionarios}">
 
                 
@@ -100,9 +102,9 @@
                 <ListView.Behaviors>
                     <local:EventToCommandBehavior
                                 
-                                EventName="ItemSelected" 
+                                EventName="ItemTapped" 
                                 Command="{Binding NavigationCommand, Mode=TwoWay}"
-                                Converter="{StaticResource SelectedItemConverter}" />
+                                Converter="{StaticResource ItemTappedConverter}" />
                 </ListView.Behaviors>
                 <!-- ################ FIM  Behaviors ##############-->
                 <!-- ###########################################-->
