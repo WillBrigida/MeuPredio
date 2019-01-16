@@ -11,15 +11,15 @@
         <ScrollView>
 
             <Grid
-                RowSpacing="-20"
+                RowSpacing="-50"
                 Margin="20,0"
                 HorizontalOptions="FillAndExpand">
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="100"/>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="100"/>
-                    <RowDefinition Height="Auto"/>
-                    <RowDefinition Height="20"/>
+                    <RowDefinition Height="80"/>
+                    <RowDefinition Height=".5*"/>
+                    <RowDefinition Height=".25*"/>
+                    <RowDefinition Height=".5*"/>
+                    <RowDefinition Height=".3*"/>
 
                     <RowDefinition Height="*"/>
                 </Grid.RowDefinitions>
@@ -28,6 +28,41 @@
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
+
+                <!--<BoxView
+                    Grid.Row="0"
+                    Grid.Column="0"
+                    Grid.ColumnSpan="3"
+                    BackgroundColor="Blue">
+                </BoxView>
+
+                <BoxView
+                    Grid.Row="1"
+                    Grid.Column="0"
+                    Grid.ColumnSpan="3"
+                    BackgroundColor="Red">
+                </BoxView>
+
+                <BoxView
+                    Grid.Row="2"
+                    Grid.Column="0"
+                    Grid.ColumnSpan="3"
+                    BackgroundColor="Green">
+                </BoxView>
+
+                <BoxView
+                    Grid.Row="3"
+                    Grid.Column="0"
+                    Grid.ColumnSpan="3"
+                    BackgroundColor="Gray">
+                </BoxView>
+
+                <BoxView
+                    Grid.Row="4"
+                    Grid.Column="0"
+                    Grid.ColumnSpan="3"
+                    BackgroundColor="Pink">
+                </BoxView>-->
 
 
 
@@ -131,9 +166,9 @@
                 BackgroundColor="White"
                 Grid.Column="1"
                 Grid.Row="3"
-                FontSize="35"
-                Text="&#xf007;"
-                TextColor="Red"
+                FontSize="40"
+                Text="&#xf2bd;"
+                TextColor="#000000"
                 Command="{Binding SindicoCommand} "
                 Style="{StaticResource MainMenuIconsStyle}"/>
 
@@ -154,7 +189,7 @@
                 Grid.Column="2"
                 Grid.Row="3"
                 FontSize="35"
-                Text="&#xf500;"
+                Text="&#xf15c;"
                 TextColor="#49a4aa"
                 Command="{Binding RegrasCommand}"
                 Style="{StaticResource MainMenuIconsStyle}"/>
@@ -163,7 +198,7 @@
                 <Label 
                 HorizontalOptions="Center"
                 Grid.Column="2"
-                FontSize="14"
+                FontSize="12"
                 Grid.Row="4"
                 Text="Regras">
 
