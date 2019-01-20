@@ -16,12 +16,9 @@
                 HorizontalOptions="FillAndExpand">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="80"/>
-                    <RowDefinition Height=".7*"/>
-                    <RowDefinition Height=".30*"/>
-                    <RowDefinition Height=".7*"/>
-                    <RowDefinition Height=".30*"/>
-
-                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="110"/>
+                    <RowDefinition Height="150"/>
+                    <RowDefinition Height="Auto"/>
                 </Grid.RowDefinitions>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
@@ -82,8 +79,10 @@
                 <Label 
                 HorizontalOptions="Center"
                 Grid.Column="0"
-                Grid.Row="2"
+                Grid.Row="1"
                 FontSize="12"
+                    VerticalOptions="Center"
+                    Margin="0,60,0,0"
                 Text="Funcionários">
 
                 </Label>
@@ -107,7 +106,9 @@
                 HorizontalOptions="Center"
                 Grid.Column="1"
                 FontSize="12"
-                Grid.Row="2"
+                    VerticalOptions="Center"
+                    Margin="0,60,0,0"
+                Grid.Row="1"
                 Text="Avisos"/>
 
 
@@ -127,7 +128,9 @@
                 HorizontalOptions="Center"
                 Grid.Column="2"
                 FontSize="12"
-                Grid.Row="2"
+                Grid.Row="1"
+                    VerticalOptions="Center"
+                    Margin="0,75,0,0"
                     HorizontalTextAlignment="Center"
                    LineBreakMode="WordWrap"
                 Text="Encomendas e correspondências"/>
@@ -154,7 +157,9 @@
                 HorizontalOptions="Center"
                 Grid.Column="0"
                 FontSize="12"
-                Grid.Row="4"
+                Grid.Row="3"
+                    VerticalOptions="Center"
+                    Margin="0,75,0,0"
                 HorizontalTextAlignment="Center"
                    LineBreakMode="WordWrap"
                 Text="Livro de Reclamações"/>
@@ -176,7 +181,9 @@
                 HorizontalOptions="Center"
                 Grid.Column="1"
                 FontSize="12"
-                Grid.Row="4"
+                     VerticalOptions="Center"
+                    Margin="0,60,0,0"
+                Grid.Row="3"
                 Text="Sindico">
 
                 </Label>
@@ -199,7 +206,9 @@
                 HorizontalOptions="Center"
                 Grid.Column="2"
                 FontSize="12"
-                Grid.Row="4"
+                     VerticalOptions="Center"
+                    Margin="0,60,0,0"
+                Grid.Row="3"
                 Text="Regras">
 
                 </Label>
