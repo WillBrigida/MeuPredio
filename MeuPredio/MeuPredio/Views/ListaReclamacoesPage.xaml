@@ -27,7 +27,7 @@
                         FontSize="25"
                         Text="+"
                         TextColor="White"
-                        BorderRadius="27"
+                        BorderRadius="31"
                         BackgroundColor="#49a4aa"
                         Style="{StaticResource MainMenuIconsStyle}"/>
                 </Frame>

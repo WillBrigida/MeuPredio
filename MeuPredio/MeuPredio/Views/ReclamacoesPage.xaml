@@ -12,13 +12,11 @@
     
     BarBackgroundColor="#2196F3"
              BarTextColor="White">
-
-
+   
     <!--<TabbedPage.ToolbarItems>
         <ToolbarItem 
             Text="{Binding Contador}"/>
     </TabbedPage.ToolbarItems>-->
-
 
 
     <tabs:AbrirReclamacoesPage Title="Sugestões" Icon="baseline_thumb_up_white_24.png"/>

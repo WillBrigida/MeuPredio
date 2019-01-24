@@ -133,18 +133,19 @@ namespace MeuPredio.ViewModels
                  new Funcionarios{ NomePessoa = "Fernando", SobrenomePessoa = "da Silva Bertoldo",
               TelefonePessoa = "(21) 98115-5225", Descricao = "Funcionário responsável por...",
              FuncaoFuncionario = "Servente Geral", EmailPessoa = "jose_silva@gmail.com", Imagem = "port4"},
+
                   new Funcionarios{ NomePessoa = "Claudio", SobrenomePessoa = "da Silva Bertoldo",
               TelefonePessoa = "(21) 98115-5225", Descricao = "Funcionário responsável por...",
              FuncaoFuncionario = "Porteiro Chefe", EmailPessoa = "jose_silva@gmail.com", Imagem = "port1"},
+
                    new Funcionarios{ NomePessoa = "Antonio", SobrenomePessoa = "de Jesus",
               TelefonePessoa = "(21) 98115-5225", Descricao = "Funcionário responsável por...",
              FuncaoFuncionario = "Plantonista", EmailPessoa = "jose_silva@gmail.com", Imagem = "port2"},
-                    new Funcionarios{ NomePessoa = "Fátima", SobrenomePessoa = "da Silva Bertoldo",
-              TelefonePessoa = "(21) 98115-5225", Descricao = "Funcionário responsável por...",
-             FuncaoFuncionario = "Porteiro", EmailPessoa = "jose_silva@gmail.com", Imagem = "port3"},
+                   
                      new Funcionarios{ NomePessoa = "Renato", SobrenomePessoa = "da Silva Bertoldo",
               TelefonePessoa = "(21) 98115-5225", Descricao = "Funcionário responsável por...",
              FuncaoFuncionario = "Porteiro", EmailPessoa = "jose_silva@gmail.com", Imagem = "port4"},
+
                      new Funcionarios{ NomePessoa = "Wander", SobrenomePessoa = "Conceição",
               TelefonePessoa = "(21) 98115-5225", Descricao = "Funcionário responsável por...",
              FuncaoFuncionario = "Sindico", EmailPessoa = "wander@gmail.com", Imagem = "port1"},
