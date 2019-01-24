@@ -1,11 +1,37 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+<ContentPage 
+    xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MeuPredio.Views.ListaReclamacoesPage">
+    
+    
     <ContentPage.Content>
-        <StackLayout>
-            <Button
-                Command="{Binding NovaReclamacaoCommand}"/>
-        </StackLayout>
+        <AbsoluteLayout>
+
+
+
+
+            <AbsoluteLayout
+                AbsoluteLayout.LayoutBounds="1,1,.3,.2"
+                AbsoluteLayout.LayoutFlags="All"
+                Margin="20">
+                <Frame
+                     Padding="0"
+                     BackgroundColor="#49a4aa"
+                     CornerRadius="27"
+                     HasShadow="True"
+                     AbsoluteLayout.LayoutBounds="1,1,55,55"
+                     AbsoluteLayout.LayoutFlags="PositionProportional">
+                    <Button
+                        Command="{Binding NovaReclamacaoCommand}"
+                        FontSize="25"
+                        Text="+"
+                        TextColor="White"
+                        BorderRadius="27"
+                        BackgroundColor="#49a4aa"
+                        Style="{StaticResource MainMenuIconsStyle}"/>
+                </Frame>
+            </AbsoluteLayout>
+        </AbsoluteLayout>
     </ContentPage.Content>
 </ContentPage>
