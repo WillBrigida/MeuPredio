@@ -122,33 +122,29 @@ namespace MeuPredio.ViewModels
         {
             ListaFuncionarios = new ObservableCollection<Funcionarios>()
            {
-               new Funcionarios{ NomePessoa = "José", SobrenomePessoa = "da Silva Bertoldo",
-              TelefonePessoa = "(21 )98115-5225", Descricao = "Funcionário responsável por...",
-             FuncaoFuncionario = "Porteiro", EmailPessoa = "jose_silva@gmail.com", Imagem = "port1" },
+               new Funcionarios{ NomePessoa = "José", SobrenomePessoa = "Gregório",
+              TelefonePessoa = "(21) 98115 - 5225", Descricao = "Funcionário responsável por...",
+             FuncaoFuncionario = "Porteiro Chefe", EmailPessoa = "jose_silva@gmail.com", Imagem = "port1" },
 
                 new Funcionarios{ NomePessoa = "Marcos", SobrenomePessoa = "Ferraz",
-              TelefonePessoa = "(21) 98115-5225", Descricao = "Funcionário responsável por...",
-             FuncaoFuncionario = "Zelador", EmailPessoa = "jose_silva@gmail.com", Imagem = "port2"},
+              TelefonePessoa = "(21) 98115 - 5225", Descricao = "Funcionário responsável por...",
+             FuncaoFuncionario = "Plantonista", EmailPessoa = "marcos@hotmailmail.com", Imagem = "port2"},
 
                  new Funcionarios{ NomePessoa = "Fernando", SobrenomePessoa = "da Silva Bertoldo",
-              TelefonePessoa = "(21) 98115-5225", Descricao = "Funcionário responsável por...",
+              TelefonePessoa = "(21) 98115 - 5225", Descricao = "Funcionário responsável por...",
              FuncaoFuncionario = "Servente Geral", EmailPessoa = "jose_silva@gmail.com", Imagem = "port4"},
 
                   new Funcionarios{ NomePessoa = "Claudio", SobrenomePessoa = "da Silva Bertoldo",
-              TelefonePessoa = "(21) 98115-5225", Descricao = "Funcionário responsável por...",
-             FuncaoFuncionario = "Porteiro Chefe", EmailPessoa = "jose_silva@gmail.com", Imagem = "port1"},
+              TelefonePessoa = "(21) 98115 - 5225", Descricao = "Funcionário responsável por...",
+             FuncaoFuncionario = "Folguista", EmailPessoa = "jose_silva@gmail.com", Imagem = "port1"},
 
                    new Funcionarios{ NomePessoa = "Antonio", SobrenomePessoa = "de Jesus",
-              TelefonePessoa = "(21) 98115-5225", Descricao = "Funcionário responsável por...",
+              TelefonePessoa = "(21) 98115 - 5225", Descricao = "Funcionário responsável por...",
              FuncaoFuncionario = "Plantonista", EmailPessoa = "jose_silva@gmail.com", Imagem = "port2"},
                    
-                     new Funcionarios{ NomePessoa = "Renato", SobrenomePessoa = "da Silva Bertoldo",
-              TelefonePessoa = "(21) 98115-5225", Descricao = "Funcionário responsável por...",
+                     new Funcionarios{ NomePessoa = "Renato", SobrenomePessoa = "Líbano",
+              TelefonePessoa = "(21) 98115 - 5225", Descricao = "Funcionário responsável por...",
              FuncaoFuncionario = "Porteiro", EmailPessoa = "jose_silva@gmail.com", Imagem = "port4"},
-
-                     new Funcionarios{ NomePessoa = "Wander", SobrenomePessoa = "Conceição",
-              TelefonePessoa = "(21) 98115-5225", Descricao = "Funcionário responsável por...",
-             FuncaoFuncionario = "Sindico", EmailPessoa = "wander@gmail.com", Imagem = "port1"},
 
            };
 
@@ -182,6 +178,7 @@ namespace MeuPredio.ViewModels
 
         private string GetStatus()
         {
+            
             this.Color = "#65B980";
             this.Status = EnumStatus.Escalado.ToString();
             return Status;

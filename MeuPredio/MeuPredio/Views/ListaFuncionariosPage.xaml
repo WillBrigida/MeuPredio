@@ -52,10 +52,10 @@
                     <DataTemplate>
                         <ViewCell>
                             <StackLayout
-                                Margin="5">
+                                Margin="10">
                                 <Grid>
                                     <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="40"/>
+                                        <ColumnDefinition Width="60"/>
                                         <ColumnDefinition Width="*"/>
                                         <ColumnDefinition Width="20"/>
                                     </Grid.ColumnDefinitions>
@@ -63,12 +63,14 @@
                                     <controls:CircleImage
                                         HorizontalOptions="StartAndExpand"
                                         BorderColor="#65B980"
-                                        BorderThickness=".5" 
+                                        BorderThickness="1" 
                                         Aspect="AspectFill" 
                                         Source="{Binding Imagem}"
-                                        HeightRequest="40"/>
+                                        HeightRequest="55"/>
 
                                     <Label
+                                        FontSize="16"
+                                        VerticalOptions="Center"
                                         Margin="5,0"
                                         HorizontalOptions="StartAndExpand"
                                         Grid.Column="1"

@@ -29,7 +29,7 @@
             <ListView
                 VerticalOptions="Start"
                     SeparatorVisibility="None"
-                    ItemsSource="{Binding ListaMenu, Mode=TwoWay}"
+                    ItemsSource="{Binding ListaMore, Mode=TwoWay}"
                     HasUnevenRows="False">
 
             <!-- ###########################################-->
@@ -48,7 +48,7 @@
                 <DataTemplate>
                     <ViewCell>
                         <Grid
-                                    Padding="20,0" >
+                            Padding="20,0" >
 
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="30"/>
@@ -57,17 +57,17 @@
 
 
                             <Label
-                                        TextColor="{Binding Cor}"
-                                        Text="{Binding Icone}"
-                                        Style="{StaticResource MainMenuIconsStyle}"/>
+                                TextColor="{Binding Cor}"
+                                Text="{Binding Icone}"
+                                Style="{StaticResource MainMenuIconsStyle}"/>
 
 
                             <Label
-                                        FontSize="16"
-                                        TextColor="Black"
-                                        VerticalOptions="Center"
-                                        Grid.Column="1"
-                                        Text="{Binding Titulo}"/>
+                                FontSize="16"
+                                TextColor="Black"
+                                VerticalOptions="Center"
+                                Grid.Column="1"
+                                Text="{Binding Lista}"/>
 
 
                         </Grid>
