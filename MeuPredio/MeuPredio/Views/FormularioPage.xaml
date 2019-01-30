@@ -11,6 +11,12 @@
         <StackLayout
             Margin="10">
 
+            <Label
+                Text="Reclamação"
+                Margin="0,10"
+                HorizontalOptions="Center"
+                FontSize="Large"/>
+
             <controls:CustomPicker
                 ItemsSource="{Binding ListaTipo, Mode=TwoWay}"
                 ItemDisplayBinding="{Binding ListaEnum, Mode=TwoWay}"
@@ -25,9 +31,12 @@
 
 
             <controls:CustomEditor
+                
                 Text="{Binding Descricao}"
-                Placeholder="{Binding Placeholder}"
-                VerticalOptions="FillAndExpand"/>
+                Placeholder="Digite sua reclamação"
+                VerticalOptions="FillAndExpand">
+                
+            </controls:CustomEditor>
 
 
             

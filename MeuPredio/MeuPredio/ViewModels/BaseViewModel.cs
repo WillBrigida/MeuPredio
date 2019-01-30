@@ -82,21 +82,21 @@ namespace MeuPredio.ViewModels
             set { this.SetProperty(ref isRunning, value); }
         }
 
-        private string status;
+        //private string status;
 
-        public string Status
-        {
-            get { return status; }
-            set { this.SetProperty(ref status, value); }
-        }
+        //public string Status
+        //{
+        //    get { return status; }
+        //    set { this.SetProperty(ref status, value); }
+        //}
 
-        private string color;
+        //private string color;
 
-        public string Color
-        {
-            get { return color; }
-            set { SetProperty(ref color, value); }
-        }
+        //public string Color
+        //{
+        //    get { return color; }
+        //    set { SetProperty(ref color, value); }
+        //}
 
         private string _title;
 

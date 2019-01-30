@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Text;
 using Xamarin.Forms;
 
-namespace MeuPredio.ViewModels.Menu
+namespace MeuPredio.ViewModels.Menu.Portaria
 {
     public class SindicoViewModel : BaseViewModel
     {
@@ -43,7 +43,15 @@ namespace MeuPredio.ViewModels.Menu
             set { SetProperty(ref _email, value); }
         }
 
-        
+        private string _imagem;
+
+        public string Imagem
+        {
+            get { return _imagem; }
+            set { SetProperty(ref _imagem, value); }
+        }
+
+
 
         #endregion
 
@@ -54,11 +62,12 @@ namespace MeuPredio.ViewModels.Menu
         #region Construtor
         public SindicoViewModel()
         {
-            
             Nome = "Wandergleisson Costa";
             Funcao = "Sindico";
-            Telefone = "(21) 9999-9999";
+            Imagem = "wp.png";
+            Telefone = "(21) 9999 - 9999";
             Email = "wander@gmail.com";
+            
         }
 
         #endregion

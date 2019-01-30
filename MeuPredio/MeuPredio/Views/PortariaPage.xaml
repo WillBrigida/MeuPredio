@@ -5,11 +5,12 @@
     x:Class="MeuPredio.Views.PortariaPage"
     BackgroundColor="White"
     Title="Portaria">
-    
-    
-    <ContentPage.Content >
-        <ScrollView>
 
+   
+        
+    <ContentPage.Content >
+        
+        <ScrollView>
             <Grid
                 RowSpacing="-50"
                 Margin="20,0"
@@ -64,157 +65,167 @@
 
 
                 <Button
-                Padding="0,30"
-                BackgroundColor="White"
-                Grid.Column="0"
-                Grid.Row="1"
-                FontSize="35"
-                Text="&#xf500;"
-                TextColor="#49a4aa"
-                Command="{Binding ListaFuncionariosCommand} "
-                Style="{StaticResource MainMenuIconsStyle}"/>
+                    Padding="0,30"
+                    BackgroundColor="White"
+                    Grid.Column="0"
+                    Grid.Row="1"
+                    FontSize="45"
+                    Text="&#xf500;"
+                    TextColor="#49a4aa"
+                    Command="{Binding ListaFuncionariosCommand} "
+                    Style="{StaticResource MainMenuIconsStyle}"/>
 
+                
 
 
                 <Label 
-                HorizontalOptions="Center"
-                Grid.Column="0"
-                Grid.Row="1"
-                FontSize="12"
+                    HorizontalOptions="Center"
+                    Grid.Column="0"
+                    Grid.Row="1"
+                    FontSize="12"
                     VerticalOptions="Center"
-                    Margin="0,60,0,0"
-                Text="Funcionários">
+                    Margin="0,70,0,0"
+                    Text="Funcionários"/>
 
-                </Label>
 
 
 
                 <Button
-                Padding="0,30"
-                BackgroundColor="White"
-                Grid.Column="1"
-                Grid.Row="1"
-                FontSize="35"
-                TextColor="Orange"
-                Text="&#xf071;"
-                Command="{Binding AvisosCommand}"
-                Style="{StaticResource MainMenuIconsStyle}"/>
+                    Padding="0,30"
+                    BackgroundColor="White"
+                    Grid.Column="1"
+                    Grid.Row="1"
+                    FontSize="45"
+                    TextColor="Orange"
+                    Text="&#xf071;"
+                    Command="{Binding AvisosCommand}"
+                    Style="{StaticResource MainMenuIconsStyle}"/>
 
 
+                
 
                 <Label 
-                HorizontalOptions="Center"
-                Grid.Column="1"
-                FontSize="12"
+                    HorizontalOptions="Center"
+                    Grid.Column="1"
+                    FontSize="12"
                     VerticalOptions="Center"
-                    Margin="0,60,0,0"
-                Grid.Row="1"
-                Text="Avisos"/>
+                    Margin="0,70,0,0"
+                    Grid.Row="1"
+                    Text="Avisos"/>
+
 
 
 
                 <Button
-                Padding="0,30"
-                BackgroundColor="White"
-                Grid.Column="2"
-                Grid.Row="1"
-                FontSize="35"
-                Text="&#xf466;"
-                TextColor="#e1c27f"
-                Command="{Binding EncomendasCommand} "
-                Style="{StaticResource MainMenuIconsStyle}"/>
+                    Padding="0,30"
+                    BackgroundColor="White"
+                    Grid.Column="2"
+                    Grid.Row="1"
+                    FontSize="45"
+                    Text="&#xf15c;"
+                    TextColor="#49a4aa"
+                    Command="{Binding RegrasCommand}"
+                    Style="{StaticResource MainMenuIconsStyle}"/>
+
+
+
 
                 <Label 
-                HorizontalOptions="Center"
-                Grid.Column="2"
-                FontSize="12"
-                Grid.Row="1"
+                    HorizontalOptions="Center"
+                    Grid.Column="2"
+                    FontSize="12"
                     VerticalOptions="Center"
-                    Margin="0,75,0,0"
+                    Margin="0,70,0,0"
+                    Grid.Row="1"
+                    Text="Regras"/>
+                
+                
+                
+                
+                
+                <!--<Button
+                    Padding="0,30"
+                    BackgroundColor="White"
+                    Grid.Column="2"
+                    Grid.Row="1"
+                    FontSize="40"
+                    Text="&#xf466;"
+                    TextColor="#e1c27f"
+                    Command="{Binding EncomendasCommand} "
+                    Style="{StaticResource MainMenuIconsStyle}"/>
+                
+                
+                
+
+                <Label 
+                    HorizontalOptions="Center"
+                    Grid.Column="2"
+                    FontSize="12"
+                    Grid.Row="1"
+                    VerticalOptions="Center"
+                    Margin="0,60,0,0"
                     HorizontalTextAlignment="Center"
-                   LineBreakMode="WordWrap"
-                Text="Encomendas e correspondências"/>
+                    LineBreakMode="TailTruncation"
+                    Text="Encomendas e correspondências"/>-->
+
+
+                
+
+                <Button
+                    Padding="0,30"
+                    BackgroundColor="White"
+                    Grid.Column="0"
+                    Grid.Row="3"
+                    FontSize="45"
+                    Text="&#xf02d;"
+                    TextColor="Red"
+                    Command="{Binding ReclamacoesCommand}"
+                    Style="{StaticResource MainMenuIconsStyle}"/>
 
                 
 
 
-
-
-                <Button
-                Padding="0,30"
-                BackgroundColor="White"
-                Grid.Column="0"
-                Grid.Row="3"
-                FontSize="35"
-                Text="&#xf02d;"
-                TextColor="Red"
-                Command="{Binding ReclamacoesCommand}"
-                Style="{StaticResource MainMenuIconsStyle}"/>
-
-
-
                 <Label 
-                HorizontalOptions="Center"
-                Grid.Column="0"
-                FontSize="12"
-                Grid.Row="3"
+                    HorizontalOptions="Center"
+                    Grid.Column="0"
+                    FontSize="12"
+                    Grid.Row="3"
                     VerticalOptions="Center"
-                    Margin="0,75,0,0"
-                HorizontalTextAlignment="Center"
-                   LineBreakMode="WordWrap"
-                Text="Livro de Reclamações"/>
+                    Margin="0,70,0,0"
+                    VerticalTextAlignment="End"
+                    HorizontalTextAlignment="Center"
+                    LineBreakMode="HeadTruncation"
+                    Text="Livro de Reclamações"/>
 
                 
 
-                <Button
-                Padding="0,30"
-                BackgroundColor="White"
-                Grid.Column="1"
-                Grid.Row="3"
-                FontSize="40"
-                Text="&#xf2bd;"
-                TextColor="#000000"
-                Command="{Binding SindicoCommand} "
-                Style="{StaticResource MainMenuIconsStyle}"/>
-
-                <Label 
-                HorizontalOptions="Center"
-                Grid.Column="1"
-                FontSize="12"
-                     VerticalOptions="Center"
-                    Margin="0,60,0,0"
-                Grid.Row="3"
-                Text="Sindico">
-
-                </Label>
-
-
 
                 <Button
-                Padding="0,30"
-                BackgroundColor="White"
-                Grid.Column="2"
-                Grid.Row="3"
-                FontSize="35"
-                Text="&#xf15c;"
-                TextColor="#49a4aa"
-                Command="{Binding RegrasCommand}"
-                Style="{StaticResource MainMenuIconsStyle}"/>
+                    Padding="0,30"
+                    BackgroundColor="White"
+                    Grid.Column="1"
+                    Grid.Row="3"
+                    FontSize="45"
+                    Text="&#xf559;"
+                    TextColor="#000000"
+                    Command="{Binding SindicoCommand} "
+                    Style="{StaticResource MainMenuIconsStyle}"/>
+                
+                
 
-
+                
                 <Label 
-                HorizontalOptions="Center"
-                Grid.Column="2"
-                FontSize="12"
-                     VerticalOptions="Center"
-                    Margin="0,60,0,0"
-                Grid.Row="3"
-                Text="Regras">
-
-                </Label>
+                    HorizontalOptions="Center"
+                    Grid.Column="1"
+                    FontSize="12"
+                    VerticalOptions="Center"
+                    Margin="0,70,0,0"
+                    Grid.Row="3"
+                    Text="Sindico"/>
 
 
-
+                
+                
             </Grid>
         </ScrollView>
 

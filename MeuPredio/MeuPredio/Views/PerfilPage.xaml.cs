@@ -1,38 +1,51 @@
 ﻿using MeuPredio.ViewModels;
 using MeuPredio.ViewModels.Classes;
 using MeuPredio.ViewModels.Menu;
+using MeuPredio.ViewModels.Menu.Portaria;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
 namespace MeuPredio.Views
 {
-	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class PerfilPage : ContentPage
-	{
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class PerfilPage : ContentPage
+    {
 
-        static bool controle = true;
-		public PerfilPage ()
-		{
-			InitializeComponent ();
-            
-            if (controle == true)
-            {
-                this.BindingContext = new ListaFuncionariosViewModel();
-                return;
-            }
-            this.BindingContext = new SindicoViewModel();
-            controle = true;
+        static bool controle;
+        public PerfilPage()
+        {
+            InitializeComponent();
+            Teste();
         }
 
-       
 
-        protected override  void OnAppearing()
+        private void Teste()
+        {
+
+            if (controle == false)
+            {
+                this.BindingContext = new ListaFuncionariosViewModel();
+                //this.BindingContext = new SindicoViewModel();
+
+            }
+            else
+            {
+                this.BindingContext = new SindicoViewModel();
+                controle = false;
+            }
+        }
+
+
+
+        protected override void OnAppearing()
         {
             base.OnAppearing();
             MessagingCenter.Subscribe<MsgCenter>(this, "confirmacao", message =>
             {
-                controle = false;
+                controle = true;
             });
+
+
         }
     }
 }

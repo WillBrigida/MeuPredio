@@ -19,7 +19,8 @@
     </TabbedPage.ToolbarItems>-->
 
 
-    <tabs:AbrirReclamacoesPage Title="Sugestões" Icon="baseline_thumb_up_white_24.png"/>
     <tabs:ListaReclamacoesPage Title="Reclamações" Icon="baseline_thumb_down_white_24.png"/>
-    
+    <tabs:SugestoesPage Title="Sugestões" Icon="ideaWhite.png"/>
+
+
 </TabbedPage>

@@ -2,22 +2,18 @@
 <ContentPage 
     xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MeuPredio.Views.ListaReclamacoesPage">
+             x:Class="MeuPredio.Views.SugestoesPage">
     
     
     <ContentPage.Content>
         <AbsoluteLayout>
-
-
-
-
             <AbsoluteLayout
                 AbsoluteLayout.LayoutBounds="1,1,.3,.2"
                 AbsoluteLayout.LayoutFlags="All"
                 Margin="20">
                 <Frame
                      Padding="0"
-                     BackgroundColor="#c32f2d"
+                     BackgroundColor="#2f4fbf"
                      CornerRadius="27"
                      HasShadow="True"
                      AbsoluteLayout.LayoutBounds="1,1,55,55"
@@ -28,7 +24,7 @@
                         Text="+"
                         TextColor="White"
                         BorderRadius="31"
-                        BackgroundColor="#c32f2d"
+                        BackgroundColor="#2f4fbf"
                         Style="{StaticResource MainMenuIconsStyle}"/>
                 </Frame>
             </AbsoluteLayout>

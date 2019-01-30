@@ -68,6 +68,8 @@
                                         Source="{Binding Imagem}"
                                         HeightRequest="55"/>
 
+                                   
+
                                     <Label
                                         FontSize="16"
                                         VerticalOptions="Center"

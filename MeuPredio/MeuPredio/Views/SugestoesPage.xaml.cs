@@ -1,5 +1,4 @@
-﻿using MeuPredio.ViewModels.Menu.Portaria;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,12 +10,11 @@ using Xamarin.Forms.Xaml;
 namespace MeuPredio.Views
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class PopUpMorePage 
+	public partial class SugestoesPage : ContentPage
 	{
-		public PopUpMorePage ()
+		public SugestoesPage ()
 		{
 			InitializeComponent ();
-            BindingContext = new PopUpMoreViewModel();
 		}
 	}
 }

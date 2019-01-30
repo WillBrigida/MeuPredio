@@ -25,7 +25,7 @@ namespace MeuPredio.ViewModels.Menu.Reclamacoes
 
         private async void OnNovaReclamacaoExecute(object obj)
         {
-            await Navigation.PushAsync<FormularioViewModel>(false);
+            await Navigation.PushAsync<FormularioViewModel>(true);
         }
         #endregion
     }

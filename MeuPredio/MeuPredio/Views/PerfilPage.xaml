@@ -4,17 +4,23 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="MeuPredio.Views.PerfilPage"
     Title="Perfil"
+     xmlns:local="clr-namespace:MeuPredio.ViewModels.Menu.Portaria"
     BackgroundColor="White"
     xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin">
 
 
     <ContentPage.ToolbarItems>
+        
         <ToolbarItem 
             Icon="baseline_more_vert_white_24.png"
             Command="{Binding MoreCommand}"/>
     </ContentPage.ToolbarItems>
 
-    <ContentPage.Content>
+    <ContentPage.BindingContext>
+        <local:SindicoViewModel/>
+    </ContentPage.BindingContext>
+
+<ContentPage.Content>
         <ScrollView>
             <StackLayout>
                 <Grid>

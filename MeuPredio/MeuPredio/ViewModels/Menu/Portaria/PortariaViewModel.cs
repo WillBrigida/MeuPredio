@@ -60,13 +60,11 @@ namespace MeuPredio.ViewModels
 
         private async void OnSindicoExecute(object obj)
         {
-
-            MessagingCenter.Send(new MsgCenter { msg = this.Controle }, "confirmacao");
-
             var mdp = (App.Current.MainPage as MasterDetailPage);
             var navPae = mdp.Detail as NavigationPage;
-
+            MessagingCenter.Send(new MsgCenter { msg = this.Controle }, "confirmacao");
             await navPae.PushAsync(new PerfilPage());
+
         }
 
 

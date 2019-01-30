@@ -4,78 +4,82 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
     xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup"
-    BackgroundColor="Transparent"
+    xmlns:local="clr-namespace:MeuPredio.Helpers.Behaviors"
+    BackgroundColor="#20000000"
+    
     x:Class="MeuPredio.Views.PopUpMorePage">
 
     <pages:PopupPage.Animation>
 
         <animations:ScaleAnimation 
-            DurationIn="5"
             PositionIn="Right"   
+            PositionOut="Right"   
                       EasingIn="SinIn"
                       EasingOut="SinIn"/>
     </pages:PopupPage.Animation>
 
-        <Frame
-            
-        
-            Margin="150,5,5,400"
-            VerticalOptions="Start"
-            HorizontalOptions="End">
-        <StackLayout
-            VerticalOptions="Start"
-            HorizontalOptions="End">
-            
-            <ListView
-                VerticalOptions="Start"
-                    SeparatorVisibility="None"
-                    ItemsSource="{Binding ListaMore, Mode=TwoWay}"
-                    HasUnevenRows="False">
 
-            <!-- ###########################################-->
-            <!-- ################  Behaviors ##################-->
-            <!--<ListView.Behaviors>
+    
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <local:SelectedItemEventArgsToSelectedItemConverter x:Key="SelectedItemConverter" />
+            <local:ItemTappedEventArgsToItemTappedConverter x:Key="ItemTappedConverter" />
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+
+
+    <Frame
+        Margin="3"
+        Padding="1"
+         VerticalOptions="Start"
+         HorizontalOptions="EndAndExpand">
+
+
+        <StackLayout
+            BackgroundColor="White"
+            VerticalOptions="Start"
+            HorizontalOptions="EndAndExpand">
+
+
+            <ListView
+                VerticalOptions="CenterAndExpand"
+                HeightRequest="98"
+                WidthRequest="192"
+                SeparatorVisibility="None"
+                ItemsSource="{Binding ListaMore, Mode=TwoWay}"
+                HasUnevenRows="False">
+
+                <!-- ###########################################-->
+                <!-- ################  Behaviors ##################-->
+                <ListView.Behaviors>
                 <local:EventToCommandBehavior
                                 
                                 EventName="ItemSelected" 
                                 Command="{Binding NavegacaoMenuCommand, Mode=TwoWay}"
                                 Converter="{StaticResource SelectedItemConverter}" />
-            </ListView.Behaviors>-->
-            <!-- ################ FIM  Behaviors ##############-->
-            <!-- ###########################################-->
+            </ListView.Behaviors>
+                <!-- ################ FIM  Behaviors ##############-->
+                <!-- ###########################################-->
 
-            <ListView.ItemTemplate>
-                <DataTemplate>
-                    <ViewCell>
-                        <Grid
-                            Padding="20,0" >
-
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="30"/>
-                                <ColumnDefinition Width="*"/>
-                            </Grid.ColumnDefinitions>
-
-
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            
                             <Label
-                                TextColor="{Binding Cor}"
-                                Text="{Binding Icone}"
-                                Style="{StaticResource MainMenuIconsStyle}"/>
-
-
-                            <Label
+                                Margin="15,10"
                                 FontSize="16"
                                 TextColor="Black"
                                 VerticalOptions="Center"
-                                Grid.Column="1"
-                                Text="{Binding Lista}"/>
+                                Grid.Column="0"
+                                Text="{Binding ListOpcoes}"/>
 
 
-                        </Grid>
-                    </ViewCell>
-                </DataTemplate>
-            </ListView.ItemTemplate>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
 
-        </ListView>
+            </ListView>
         </StackLayout>
 
     </Frame>

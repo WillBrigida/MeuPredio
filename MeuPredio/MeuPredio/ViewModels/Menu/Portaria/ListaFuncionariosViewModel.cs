@@ -104,6 +104,7 @@ namespace MeuPredio.ViewModels
         {
             ListaFuncionarios = new ObservableCollection<Funcionarios>();
             ListaFunc();
+            TesteList();
 
 
             this.Nome = nome + " " + sobrenome;
@@ -120,6 +121,8 @@ namespace MeuPredio.ViewModels
 
         private void ListaFunc()
         {
+            IsRunning = true;
+
             ListaFuncionarios = new ObservableCollection<Funcionarios>()
            {
                new Funcionarios{ NomePessoa = "José", SobrenomePessoa = "Gregório",
@@ -128,11 +131,11 @@ namespace MeuPredio.ViewModels
 
                 new Funcionarios{ NomePessoa = "Marcos", SobrenomePessoa = "Ferraz",
               TelefonePessoa = "(21) 98115 - 5225", Descricao = "Funcionário responsável por...",
-             FuncaoFuncionario = "Plantonista", EmailPessoa = "marcos@hotmailmail.com", Imagem = "port2"},
+             FuncaoFuncionario = "Plantonista", EmailPessoa = "marcos@hotmailmail.com", Imagem = "http://tudoeste.tudoeste.netdna-cdn.com/wp-content/files/sites/7/2015/08/Tucano-imagem-Silvia-Kochen-Wordpress.jpg"},
 
                  new Funcionarios{ NomePessoa = "Fernando", SobrenomePessoa = "da Silva Bertoldo",
               TelefonePessoa = "(21) 98115 - 5225", Descricao = "Funcionário responsável por...",
-             FuncaoFuncionario = "Servente Geral", EmailPessoa = "jose_silva@gmail.com", Imagem = "port4"},
+             FuncaoFuncionario = "Faxineiro", EmailPessoa = "jose_silva@gmail.com", Imagem = "port4"},
 
                   new Funcionarios{ NomePessoa = "Claudio", SobrenomePessoa = "da Silva Bertoldo",
               TelefonePessoa = "(21) 98115 - 5225", Descricao = "Funcionário responsável por...",
@@ -147,6 +150,8 @@ namespace MeuPredio.ViewModels
              FuncaoFuncionario = "Porteiro", EmailPessoa = "jose_silva@gmail.com", Imagem = "port4"},
 
            };
+
+            IsRunning = false;
 
         }
 
@@ -178,8 +183,7 @@ namespace MeuPredio.ViewModels
 
         private string GetStatus()
         {
-            
-            this.Color = "#65B980";
+            //this.Color = "#65B980";
             this.Status = EnumStatus.Escalado.ToString();
             return Status;
         }
@@ -190,6 +194,16 @@ namespace MeuPredio.ViewModels
             await PopupNavigation.PushAsync(new PopUpMorePage());
         }
 
+        public static string itemLista = "";
+
+        private void TesteList()
+        {
+            var lista = ListaFuncionarios;
+            foreach (var item in lista)
+            {
+                itemLista = item.NomePessoa[0].ToString();
+            }
+        }
         #endregion
     }
 }

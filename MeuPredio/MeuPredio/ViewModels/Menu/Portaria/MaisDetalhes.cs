@@ -4,14 +4,16 @@ using System.Text;
 
 namespace MeuPredio.ViewModels.Menu.Portaria
 {
-    public class More
+    public class MaisDetalhes
     {
-        public enum Enum { Reclamações, Elogios };
+        public enum Enum { Reclamação, Elogio };
         public Enum ListOpcoes { get; set; }
+        public string Icone { get; set; }
 
-        public More(Enum lista)
+        public MaisDetalhes(Enum lista, string icone)
         {
             this.ListOpcoes = lista;
+            this.Icone = icone;
         }
         
     }

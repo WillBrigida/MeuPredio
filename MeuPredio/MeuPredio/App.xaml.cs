@@ -16,6 +16,7 @@ namespace MeuPredio
             MainPage = new MenuPage();
         }
 
+
         protected override void OnStart()
         {
             //App.Current.MainPage.DisplayAlert("","OnStart","Ok");

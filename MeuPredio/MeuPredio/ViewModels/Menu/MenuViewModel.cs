@@ -32,11 +32,25 @@ namespace MeuPredio.ViewModels
                 new Classes.MenuItem (FontAwesome.Briefcase,  "Reparos / Obras", "#e1c27f"),
                 new Classes.MenuItem (FontAwesome.Calculator,  "Balancetes", "#000000"),
             };
+
+            Teste();
+
+
         }
 
         #endregion
 
         #region Métodos
+
+        public static bool controle;
+        private void Teste()
+        {
+            MessagingCenter.Subscribe<MsgCenter>(this, "confirmacao", message =>
+            {
+                controle = true;
+            });
+        }
+
 
         private async void OnNavigacaoMenuExecute(Classes.MenuItem menu)
         {
