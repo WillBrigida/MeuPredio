@@ -56,7 +56,7 @@ namespace MeuPredio.Services
             await (page.BindingContext as BaseViewModel).LoadAsync(args);
         }
 
-        public async void NavigateMenu(string titulo)
+        public void NavigateMenu(string titulo)
         {
             var mdp = (Application.Current.MainPage as MasterDetailPage);
             var navPage = mdp.Detail as NavigationPage;

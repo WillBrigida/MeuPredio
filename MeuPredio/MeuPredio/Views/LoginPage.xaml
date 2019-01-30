@@ -59,7 +59,8 @@
 
                     
                         <xfx:XfxEntry
-                        Margin="30,-20,30,0"
+                            Text="{Binding Login}"
+                            Margin="30,-20,30,0"
                             VerticalOptions="Center"
                             Keyboard="Email"
                             Placeholder=" Login"
@@ -73,10 +74,11 @@
 
 
                     <xfx:XfxEntry
-                    Margin="30,-30,30,0"
-                            IsPassword="True"
-                            Placeholder=" Senha"
-                            TextColor="Black"/>
+                        Text="{Binding Senha}"
+                        Margin="30,-30,30,0"
+                        IsPassword="True"
+                        Placeholder=" Senha"
+                        TextColor="Black"/>
 
                     <!-- ################ FIM  SENHA ###############-->
                     <!-- ###########################################-->

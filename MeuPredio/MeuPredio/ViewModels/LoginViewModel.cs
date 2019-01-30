@@ -1,4 +1,5 @@
-﻿using MeuPredio.ViewModels.Classes;
+﻿using MeuPredio.Helpers;
+using MeuPredio.ViewModels.Classes;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -11,17 +12,17 @@ namespace MeuPredio.ViewModels
     public class LoginViewModel : BaseViewModel
     {
         #region Propriedade
-        private bool _login;
+        private string _login;
 
-        public bool Login
+        public string Login
         {
             get { return _login; }
             set { SetProperty(ref _login, value); }
         }
 
-        private bool _senha;
+        private string _senha;
 
-        public bool Senha
+        public string Senha
         {
             get { return _senha; }
             set { SetProperty(ref _senha, value); }
@@ -35,6 +36,7 @@ namespace MeuPredio.ViewModels
             set { SetProperty(ref _lembrarSenha, value); }
         }
 
+        readonly LoginHelper _loginHelper;
         #endregion
 
         #region Commands
@@ -44,19 +46,31 @@ namespace MeuPredio.ViewModels
         #region Construtor
         public LoginViewModel()
         {
+            _loginHelper = new LoginHelper();
         }
         #endregion
 
         #region Métodos
         private async void OnLoginCommandExecute(object obj)
         {
-            
+            IsRunning = true;
+
+            var validacao = _loginHelper.SalvarLoginSenha(Login, Senha);
+            if (validacao == false)
+            {
+                await App.Current.MainPage.DisplayAlert("","Senha incorreta", "OK");
+                IsRunning = false;
+                return;
+            }
+
+           
+
             var mdp = (Application.Current.MainPage as MasterDetailPage);
             var navPage = mdp.Detail as NavigationPage;
-            IsRunning = true;
             await Task.Delay(2000);
             await App.Current.MainPage.Navigation.PopModalAsync();
             IsRunning = false;
+
         }
 
         #endregion
