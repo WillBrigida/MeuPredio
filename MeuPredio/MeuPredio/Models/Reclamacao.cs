@@ -11,13 +11,5 @@ namespace MeuPredio.Models
         public DateTime Data { get; set; }
         public string Descricao { get; set; }
         public Pessoas Pessoa { get; set; }
-
-        //public Reclamacao(TipoReclamacao tipo, string titulo, string descricao)
-        //{
-        //    this.Tipo = tipo;
-        //    this.Titulo = titulo;
-        //    this.Descricao = descricao;
-
-        //}
     }
 }

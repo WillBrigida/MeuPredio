@@ -70,7 +70,7 @@
                     Grid.Column="0"
                     Grid.Row="1"
                     FontSize="43"
-                    Text="&#xf500;"
+                    Text="&#xf2c1;"
                     TextColor="#49a4aa"
                     Command="{Binding ListaFuncionariosCommand} "
                     Style="{StaticResource MainMenuIconsStyle}"/>
@@ -177,7 +177,7 @@
                     Grid.Column="0"
                     Grid.Row="3"
                     FontSize="43"
-                    Text="&#xf02d;"
+                    Text="&#xf518;"
                     TextColor="Red"
                     Command="{Binding ReclamacoesCommand}"
                     Style="{StaticResource MainMenuIconsStyle}"/>
@@ -191,11 +191,11 @@
                     FontSize="13"
                     Grid.Row="3"
                     VerticalOptions="Center"
-                    Margin="0,73,0,0"
+                    Margin="0,80,0,0"
                     VerticalTextAlignment="End"
                     HorizontalTextAlignment="Center"
-                    LineBreakMode="WordWrap"
-                    Text="Livro de Reclamações"/>
+                    LineBreakMode="CharacterWrap"
+                    Text="Livro   de Reclamações"/>
 
                 
 
@@ -206,7 +206,7 @@
                     Grid.Column="1"
                     Grid.Row="3"
                     FontSize="43"
-                    Text="&#xf559;"
+                    Text="&#xf3ed;"
                     TextColor="#000000"
                     Command="{Binding SindicoCommand} "
                     Style="{StaticResource MainMenuIconsStyle}"/>
@@ -221,7 +221,7 @@
                     VerticalOptions="Center"
                     Margin="0,72,0,0"
                     Grid.Row="3"
-                    Text="Sindico"/>
+                    Text="Síndico"/>
 
 
                 

@@ -38,7 +38,7 @@
                         Grid.Row="0"
                         Margin="25">
                         <Grid
-                            RowSpacing="5"
+                            RowSpacing="7"
                             HorizontalOptions="Center"
                             VerticalOptions="Center">
                             <Grid.RowDefinitions>
@@ -76,10 +76,11 @@
                             
                             <Label
                                 Grid.Row="3"
-                                FontSize="15"
-                                FontAttributes="Bold"
+                                FontSize="14"
                                 HorizontalOptions="Center"
-                                Text="{Binding Status}"
+                                Text="{Binding Descricao}"
+                                VerticalTextAlignment="Center"
+                                HorizontalTextAlignment="Center"
                                 TextColor="{Binding Color}"/>
 
                         </Grid>
@@ -128,7 +129,7 @@
                                 Grid.Column="1"
                                 FontSize="14"
                                 TextColor="gray"
-                                Text="Fixo"/>
+                                Text="Portaria"/>
 
                             <Label
                                 Grid.Column="1"
@@ -143,7 +144,7 @@
                                 Grid.Row="1"
                                 FontSize="14"
                                 TextColor="gray"
-                                Text="Mobile"/>
+                                Text="Pessoal"/>
 
                             <Label  
                                 HorizontalOptions="Center"
@@ -167,6 +168,7 @@
 
 
                     <StackLayout
+                        IsVisible="{Binding IsVisible}"
                         Margin="25"
                         Grid.Row="4">
 

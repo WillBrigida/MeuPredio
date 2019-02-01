@@ -1,4 +1,6 @@
 ﻿using MeuPredio.ViewModels.Classes;
+using MeuPredio.Views;
+using Realms;
 using System;
 using System.Collections.ObjectModel;
 using System.Threading.Tasks;
@@ -67,8 +69,9 @@ namespace MeuPredio.ViewModels
             if (confirmacao == true)
             {
                 var mdp = (Application.Current.MainPage as MasterDetailPage);
+                var navPage = mdp.Detail as NavigationPage;
                 mdp.IsPresented = false; // Esconde o Menu (Master Page) antes de sair.
-                await Navigation.PushAsync<LoginViewModel>(true);
+                await navPage.PushAsync(new LoginPage());
             }
         }
 

@@ -24,12 +24,12 @@ namespace MeuPredio.Helpers
         #region MyRegion
 
         #endregion
-        readonly RealmRepository<LoginSenha> _realmRepository;
+        readonly RealmRepository<TLogin> _realmRepository;
 
 
         public LoginHelper()
         {
-            _realmRepository = new RealmRepository<LoginSenha>();
+            _realmRepository = new RealmRepository<TLogin>();
         }
 
         bool status;
@@ -39,7 +39,7 @@ namespace MeuPredio.Helpers
 
             if (loginSenhaBase.Count() == 0)
             {
-                var log = new LoginSenha();
+                var log = new TLogin();
                 log.Login = login;
                 log.Senha = senha;
 
@@ -61,5 +61,17 @@ namespace MeuPredio.Helpers
             return status;
         }
 
+
+        static bool resposta;
+        public bool VerificarLogin()
+        {
+            var contadorUsuario = _realmRepository.GetAll().Count();
+            if (contadorUsuario == 0)
+            {
+                return resposta;
+            }
+            var ultimoUsuario = _realmRepository.GetAll().OrderByDescending(l => l.ID).FirstOrDefault();
+            return resposta = ultimoUsuario.LembrarSenha;
+        }
     }
 }

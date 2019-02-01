@@ -62,7 +62,8 @@ namespace MeuPredio.ViewModels.Menu.Portaria
         #region Construtor
         public SindicoViewModel()
         {
-            Nome = "Wandergleisson Costa";
+            IsVisible = true;
+            Nome = "Wander Costa";
             Funcao = "Sindico";
             Imagem = "wp.png";
             Telefone = "(21) 9999 - 9999";

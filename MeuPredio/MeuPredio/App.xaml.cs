@@ -1,5 +1,5 @@
 ﻿using MeuPredio.Views;
-using System;
+using Realms;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -8,8 +8,10 @@ namespace MeuPredio
 {
     public partial class App : Application
     {
+
         public App()
         {
+            RealmConfiguration.DefaultConfiguration.SchemaVersion = 4;
             InitializeComponent();
             LiveReload.Init();
 

@@ -14,9 +14,9 @@ namespace MeuPredio.DataBase
         public RealmRepository()
         {
             _currentRealm = Realm.GetInstance();
+       
         }
-
-
+        
         public void Insert(TRealmObject item) // 0
         {
             var listaItem = _currentRealm.All<TRealmObject>().ToList(); // 1
@@ -32,7 +32,6 @@ namespace MeuPredio.DataBase
 
             _currentRealm.Write(() =>  // 5
             _currentRealm.Add(item));
-
             /*
              * 0 - Objeto genérico que receberá o objeto do banco local.
              * 1 - Lista de itens armazenada no banco local.

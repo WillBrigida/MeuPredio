@@ -48,6 +48,14 @@ namespace MeuPredio.ViewModels
             set { SetProperty(ref _funcao, value); }
         }
 
+        private string _descricao;
+
+        public string Descricao
+        {
+            get { return _descricao; }
+            set { SetProperty(ref _descricao, value); }
+        }
+
         private string _email;
 
         public string Email
@@ -79,6 +87,7 @@ namespace MeuPredio.ViewModels
         static string funcao = "";
         static string telefone = "";
         static string email = "";
+        static string descricao = string.Empty;
 
         public enum EnumStatus
         {
@@ -113,6 +122,7 @@ namespace MeuPredio.ViewModels
             this.Email = email;
             this.Imagem = imagem;
             this.Status = GetStatus();
+            this.Descricao = descricao;
         }
 
         #endregion
@@ -125,34 +135,33 @@ namespace MeuPredio.ViewModels
 
             ListaFuncionarios = new ObservableCollection<Funcionarios>()
            {
-               new Funcionarios{ NomePessoa = "José", SobrenomePessoa = "Gregório",
-              TelefonePessoa = "(21) 98115 - 5225", Descricao = "Funcionário responsável por...",
-             FuncaoFuncionario = "Porteiro Chefe", EmailPessoa = "jose_silva@gmail.com", Imagem = "port1" },
+               new Funcionarios{ NomePessoa = "Robson", SobrenomePessoa = "Sobrenome",
+              TelefonePessoa = "(21) 00000 - 0000", Descricao = "Expediente: Seg à Sex, 7:00 às 15:00 e Sab/Dom alternados de 7:00 as 17:00",
+             FuncaoFuncionario = "Porteiro Chefe", EmailPessoa = "jose_silva@gmail.com", Imagem = "fot1" },
 
-                new Funcionarios{ NomePessoa = "Marcos", SobrenomePessoa = "Ferraz",
-              TelefonePessoa = "(21) 98115 - 5225", Descricao = "Funcionário responsável por...",
-             FuncaoFuncionario = "Plantonista", EmailPessoa = "marcos@hotmailmail.com", Imagem = "http://tudoeste.tudoeste.netdna-cdn.com/wp-content/files/sites/7/2015/08/Tucano-imagem-Silvia-Kochen-Wordpress.jpg"},
+                new Funcionarios{ NomePessoa = "Raimundo", SobrenomePessoa = "Sobrenome",
+              TelefonePessoa = "(21) 00000 - 0000", Descricao = "Expediente: 12x36 – 19:00 às 07:00h",
+             FuncaoFuncionario = "Porteiro Noturno", EmailPessoa = "marcos@hotmailmail.com", Imagem = "fot2"},
 
-                 new Funcionarios{ NomePessoa = "Fernando", SobrenomePessoa = "da Silva Bertoldo",
-              TelefonePessoa = "(21) 98115 - 5225", Descricao = "Funcionário responsável por...",
-             FuncaoFuncionario = "Faxineiro", EmailPessoa = "jose_silva@gmail.com", Imagem = "port4"},
+                 new Funcionarios{ NomePessoa = "Everaldo", SobrenomePessoa = "Sobrenome",
+              TelefonePessoa = "(21) 00000 - 0000", Descricao = "Expediente: 12x36 – 19:00 às 07:00h",
+             FuncaoFuncionario = "Porteiro Noturno", EmailPessoa = "jose_silva@gmail.com", Imagem = "fot1"},
 
-                  new Funcionarios{ NomePessoa = "Claudio", SobrenomePessoa = "da Silva Bertoldo",
-              TelefonePessoa = "(21) 98115 - 5225", Descricao = "Funcionário responsável por...",
-             FuncaoFuncionario = "Folguista", EmailPessoa = "jose_silva@gmail.com", Imagem = "port1"},
+                  new Funcionarios{ NomePessoa = "Vitor", SobrenomePessoa = "Sobrenomeo",
+              TelefonePessoa = "(21) 00000 - 0000", Descricao = "Expediente 12x36 – 07:00 às 19:00h",
+             FuncaoFuncionario = "Porteiro Diurno", EmailPessoa = "jose_silva@gmail.com", Imagem = "fot2"},
 
-                   new Funcionarios{ NomePessoa = "Antonio", SobrenomePessoa = "de Jesus",
-              TelefonePessoa = "(21) 98115 - 5225", Descricao = "Funcionário responsável por...",
-             FuncaoFuncionario = "Plantonista", EmailPessoa = "jose_silva@gmail.com", Imagem = "port2"},
-                   
-                     new Funcionarios{ NomePessoa = "Renato", SobrenomePessoa = "Líbano",
-              TelefonePessoa = "(21) 98115 - 5225", Descricao = "Funcionário responsável por...",
-             FuncaoFuncionario = "Porteiro", EmailPessoa = "jose_silva@gmail.com", Imagem = "port4"},
+                   new Funcionarios{ NomePessoa = "Guilherme", SobrenomePessoa = "Sobrenome",
+              TelefonePessoa = "(21) 00000 - 0000", Descricao = "Expediente Seg à Sex, 23:00 à 01:00 e Sab/Dom alternados de 23:00 à 01:00",
+             FuncaoFuncionario = "Folguista", EmailPessoa = "jose_silva@gmail.com", Imagem = "fot1"},
+
+                     new Funcionarios{ NomePessoa = "Ediclaudio", SobrenomePessoa = "Sobrenome",
+              TelefonePessoa = "(21) 00000 - 0000", Descricao = "Expediente Seg à Sab 07:00 às 16:00h",
+             FuncaoFuncionario = "Limpeza", EmailPessoa = "jose_silva@gmail.com", Imagem = "fot2"},
 
            };
 
             IsRunning = false;
-
         }
 
         private void OnNavigationExecute(Funcionarios funcionarios)
@@ -165,6 +174,7 @@ namespace MeuPredio.ViewModels
             telefone = funcionarios.TelefonePessoa;
             email = funcionarios.EmailPessoa;
             imagem = funcionarios.Imagem;
+            descricao = funcionarios.Descricao;
             contador = 0;
             Init();
 

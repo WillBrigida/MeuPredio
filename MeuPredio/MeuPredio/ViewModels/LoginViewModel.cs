@@ -1,8 +1,4 @@
 ﻿using MeuPredio.Helpers;
-using MeuPredio.ViewModels.Classes;
-using System;
-using System.Collections.Generic;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin.Forms;
@@ -63,14 +59,11 @@ namespace MeuPredio.ViewModels
                 return;
             }
 
-           
-
             var mdp = (Application.Current.MainPage as MasterDetailPage);
             var navPage = mdp.Detail as NavigationPage;
             await Task.Delay(2000);
             await App.Current.MainPage.Navigation.PopModalAsync();
             IsRunning = false;
-
         }
 
         #endregion

@@ -59,18 +59,14 @@ namespace MeuPredio.ViewModels.Menu.Reclamacoes
         {
             reclamacao = new Reclamacao();
          
-
-           
-
             ListaTipo = new ObservableCollection<TipoReclamacao>
             {
                 new TipoReclamacao (TipoReclamacao.EnumTipo.Comportamental),
-                new TipoReclamacao (TipoReclamacao.EnumTipo.Convivencia),
+                new TipoReclamacao (TipoReclamacao.EnumTipo.Convivência),
                 new TipoReclamacao (TipoReclamacao.EnumTipo.Estrutural),
+                new TipoReclamacao (TipoReclamacao.EnumTipo.Elevadores),
+                new TipoReclamacao (TipoReclamacao.EnumTipo.Funcionários),
             };
-
-            
-
         }
 
         #endregion
