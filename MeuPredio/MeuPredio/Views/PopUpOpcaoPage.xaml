@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<pages:PopupPage 
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:pages="clr-namespace:Rg.Plugins.Popup.Pages;assembly=Rg.Plugins.Popup"
+    xmlns:animations="clr-namespace:Rg.Plugins.Popup.Animations;assembly=Rg.Plugins.Popup"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="MeuPredio.Views.PopUpOpcaoPage">
+
+
+    <Frame
+        Margin="3,20"
+        Padding="1"
+         VerticalOptions="Center"
+         HorizontalOptions="Center">
+
+
+        <StackLayout
+            Margin="10">
+            <Button
+                TextColor="White"
+                Text="{Binding TextButtonWp}"
+                BackgroundColor="#25d366"
+                Command="{Binding WaCommand}"/>
+            <Button
+                Text="{Binding TextButtonTp}"
+                 Command="{Binding LigarCommand}"/>
+            <Button
+                 Text="{Binding TextButtonTP}"
+                Command="{Binding LigarPortariaCommand}"/>
+
+        </StackLayout>
+    </Frame>
+
+</pages:PopupPage>

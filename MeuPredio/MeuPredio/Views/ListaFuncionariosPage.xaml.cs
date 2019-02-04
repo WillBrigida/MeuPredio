@@ -1,4 +1,5 @@
 ﻿using MeuPredio.ViewModels;
+using Rg.Plugins.Popup.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,5 +20,7 @@ namespace MeuPredio.Views
             this.BindingContext = new ListaFuncionariosViewModel();
 
         }
-	}
+
+        
+    }
 }

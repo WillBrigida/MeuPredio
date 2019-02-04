@@ -114,6 +114,14 @@ namespace MeuPredio.ViewModels
             set { SetProperty(ref _placeholder, value); }
         }
 
+
+        private string _telPortaria = "25085555";
+
+        public string TelPortaria
+        {
+            get { return _telPortaria; }
+            set { this.SetProperty(ref _telPortaria, value); }
+        }
         #endregion
         public virtual Task LoadAsync(object[] args) => Task.FromResult(true);
 

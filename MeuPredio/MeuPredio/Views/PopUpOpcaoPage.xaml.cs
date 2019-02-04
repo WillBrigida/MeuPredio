@@ -12,18 +12,14 @@ using Xamarin.Forms.Xaml;
 namespace MeuPredio.Views
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class PopUpMorePage 
+	public partial class PopUpOpcaoPage 
 	{
-		public PopUpMorePage ()
+		public PopUpOpcaoPage ()
 		{
 			InitializeComponent ();
-            BindingContext = new PopUpMoreViewModel();
+            this.BindingContext = new PopUpOpcaoViewModel();
 		}
 
-        protected override bool OnBackButtonPressed() // Desativa o botão de voltar
-        {
-            return false;
-            PopupNavigation.PopAsync();
-        }
+       
     }
 }

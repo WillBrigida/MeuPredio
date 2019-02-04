@@ -2,6 +2,7 @@
 using MeuPredio.ViewModels.Classes;
 using MeuPredio.ViewModels.Menu;
 using MeuPredio.ViewModels.Menu.Portaria;
+using Rg.Plugins.Popup.Services;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -36,7 +37,6 @@ namespace MeuPredio.Views
         }
 
 
-
         protected override void OnAppearing()
         {
             base.OnAppearing();
@@ -45,7 +45,12 @@ namespace MeuPredio.Views
                 controle = true;
             });
 
+        }
 
+        protected override bool OnBackButtonPressed() // Desativa o botão de voltar
+        {
+            PopupNavigation.PopAsync();
+            return false;
         }
     }
 }
