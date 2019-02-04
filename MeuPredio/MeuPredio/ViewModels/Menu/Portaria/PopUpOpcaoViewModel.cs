@@ -126,7 +126,6 @@ namespace MeuPredio.ViewModels.Menu.Portaria
             try
             {
                 PhoneDialer.Open(TelPortaria);
-
             }
             catch (ArgumentNullException anEx)
             {

@@ -7,10 +7,25 @@
     
     
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+        <StackLayout
+            BackgroundColor="White"
+            Margin="0,-100,0,0"
+            VerticalOptions="Center"
+            HorizontalOptions="Center">
+            <Label
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                FontSize="200"
+                Text="&#xf1c1;"
+                TextColor="Red"
+                Style="{StaticResource MainMenuIconsStyle}"/>
+
+
+            <Label 
+                HorizontalOptions="CenterAndExpand"
+                Text="Não há arquivos no momento"/>
+
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

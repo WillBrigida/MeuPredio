@@ -3,15 +3,136 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="MeuPredio.Views.RegrasPage"
+    BackgroundColor="White"
     Title="Regras">
-    
-    
-    
+
+
+
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-        </StackLayout>
+        <ScrollView>
+            <StackLayout
+                BackgroundColor="White"
+            Margin="10,30"
+            HorizontalOptions="CenterAndExpand"
+            VerticalOptions="Start">
+
+                <Label
+                FontSize="22"
+                HorizontalOptions="Center"
+                Text="MODELO DE REGIMENTO INTERNO"
+                   FontAttributes="Bold"/>
+
+                <Label
+                FontSize="22"
+                Margin="0,20"
+                HorizontalOptions="Center"
+                Text="I - DISPOSIÇÕES GERAIS"
+                   FontAttributes="Bold"/>
+
+                <Label
+                Margin="0,20"
+                FontSize="20"
+                HorizontalTextAlignment="Center"
+                HorizontalOptions="Center"
+                Text="Art. 1º - O presente Regulamento Interno do Condomínio do Edifício _____________ , tem por objetivo explicitar as normas que devem ser obedecidas por todos os moradores, sejam condôminos, inquilinos ou empregados, de acordo com as disposições contidas na Convenção.
+Art. 2º- O cumprimento rigoroso das regras abaixo possibilitará uma convivência harmônica, equilibrada e confortável para todos os moradores.
+">
+
+                </Label>
+
+                <Label
+                FontSize="22"
+                HorizontalOptions="Center"
+                Text="II - DOS DIREITOS"
+                   FontAttributes="Bold"/>
+
+                <Label
+                    VerticalOptions="LayoutOptions.Fill"
+                Margin="0,20"
+                FontSize="20"
+                HorizontalTextAlignment="Center"
+                 LineBreakMode="WordWrap"
+                HorizontalOptions="Center"
+                    
+                    
+                Text="Art. 3º - São direitos de cada condômino:
+                    
+1) usar, gozar e dispor da respectiva unidade autônoma, de acordo com o seu destino, nas condições previstas na Escritura de Convenção e neste Regulamento;
+                    
+                    
+2) usar e gozar das partes de uso comum do edifício, da garagem e da circulação, desde que não impeça idêntico uso e gozo pelos demais condôminos, obedecendo os dispostos deste Regulamento;
+                    
+3) denunciar ao Síndico, exclusivamente por escrito, todas e quaisquer irregularidades que observe ou de que esteja sendo vítima;
+                    
+4) propor modificação na Convenção e neste Regulamento;
+                    
+5) comparecer às Assembleias Gerais, discutir, votar e ser votado, obedecidas as regras da Convenção e deste Regulamento;
+         
+                    
+6) acesso a todo acervo de documentos concernentes ao condomínio;
+       
+                    
+7) exigir tratamento respeitoso do zelador e empregados do condomínio, encaminhando ao Síndico, por escrito, eventuais pedidos de aplicação das pertinentes penas disciplinares, quando for o caso.
+                    
+"/>
+
+                <Label
+                FontSize="22"
+                HorizontalOptions="Center"
+                Text="III - DAS OBRIGAÇÕES"
+                   FontAttributes="Bold"/>
+
+                <Label
+                    VerticalOptions="LayoutOptions.Fill"
+                Margin="0,20"
+                FontSize="20"
+                HorizontalTextAlignment="Center"
+                 LineBreakMode="WordWrap"
+                HorizontalOptions="Center"
+                    
+                    
+                Text="Art. 4º - É obrigação inalienável, de cada um, cumprir as regras de interesse comum, aqui estabelecidas.
+ 
+IV - DAS PROIBIÇÕES
+
+Art. 5º - É proibido:
+01) utilizar, alugar, ceder, explorar, no todo ou em parte, o apartamento para fins que não sejam estritamente residenciais;
+02) o acesso de condôminos e/ou visitantes vestindo trajes de banho e similares pelas entradas e elevadores sociais do edifício;
+03) alugar, ceder ou emprestar o apartamento para promover festividades e reuniões susceptíveis de perturbarem a tranquilidade ou o sossego dos demais moradores;
+04) utilizar os empregados do edifício para serviços particulares, durante o expediente normal de trabalho;
+05) é expressamente proibido a instalação de toldos, cortinas, sombreiros e/ou quaisquer objetos visíveis externamente, nas varandas e janelas dos apartamentos;
+06) fechamento das varandas em descumprimento ao padrão definido conforme a seguir: vidro temperado de, no mínimo, 08mm na cor bronze, toda a estrutura linear, ferragens, trincos, fechaduras e similares na cor anodizado bronze. É expressamente proibido o fechamento parcial de qualquer uma das varandas do apartamento, não sendo aceito nenhum tipo de argumento sobre o assunto; 
+07) pintar de outra cor, decorar ou alterar a forma original dos halls sociais e de serviços dos andares, sem autorização da administração do condomínio, que não se recusará em dá-las se houver concordância dos condôminos dos apartamentos contíguos, cuja entrada se localize no mesmo hall, exceto as portas dos apartamentos; 
+08) realizar mudanças de móveis sem avisar previamente o Síndico, através de registro, por escrito, no livro de ocorrências do condomínio, indicando, obrigatoriamente, o dia para saída ou entrada dos referidos móveis no edifício; 
+09) promover mudanças de móveis através dos elevadores sociais e, também, fora do horário compreendido entre 08:00 e 18:00 horas de segunda a sábado, bem como aos domingos e feriados, ficando os casos excepcionais a serem analisados e julgados pela administração do condomínio; (A)
+10) colocar ou 'abandonar' objetos, materiais ou utensílios, em qualquer das áreas ou partes comuns do edifício ou da garagem; (B)
+11) a prática de qualquer esporte, o uso de bolas, de patins, de bicicletas, de patinetes, de velocípedes, de skates, de velotrol, etc., nos halls dos apartamentos, no pilotis, na garagem e demais áreas comuns do edifício; (A)
+12) modificar ou alterar as disposições das paredes internas de divisão do apartamento sem prévia anuência do Síndico, bem como alterar a forma ou aspecto externo do edifício, sem prévia autorização da Assembleia Geral e em cumprimento da Escritura de Convenção; (D)
+13) ter ou usar, nas respectivas unidades autônomas, material, objetos, aparelhos e instalações susceptíveis de afetar por qualquer forma, a saúde, segurança e a tranquilidade dos moradores; (C)
+14) queima de fogos de artifício nas áreas comuns do edifício; (D)
+15) utilizar em volume audível aos apartamentos vizinhos, alto-falantes, rádio-vitrolas, rádio, aparelhos de televisão ou quaisquer outros instrumentos musicais ou de ruídos, no horário compreendido entre 22:00 e 07:00 horas da manhã seguinte; (D)
+parágrafo único: se 03 (três) ou mais condôminos se sentirem incomodados ou prejudicados por quaisquer barulhos ou ruídos excessivos, provocados pelo mesmo condômino infrator, no horário compreendido entre 07:00 e 22:00 horas, poderão solicitar ao Síndico, por escrito, através de registro no livro de ocorrências, uma Assembleia Geral Extraordinária - AGE, para decidir sobre o assunto, obedecendo quorum simples em segunda convocação.
+16) atirar pelas varandas, janelas ou portas, para áreas externas, áreas comuns, elevadores, hall social e de serviço, escadas, garagem e demais dependências do edifício, fragmentos de lixo, papéis, pontas de cigarros, ou quaisquer detritos ou objetos; (D)
+17) sacudir toalhas, tapetes e outros objetos, nas janelas, bem como lavar quaisquer partes das janelas e sacadas, utilizando, mangueiras ou vasilhames, permitindo que os apartamentos dos andares inferiores sejam atingidos pela água; (D)
+18) despejar lixo e outras varreduras fora do local destinado, ou seja, as lixeiras dos corredores, observando o acondicionamento em sacos plásticos, devidamente lacrados e sem furos; (A)
+19) remover material do apartamento durante reforma, sem estar bem acondicionados em depósitos apropriados; (A)
+20) depositar nos subsolos e nos terrenos contíguos ao edifício materiais de qualquer espécie, retirados dos apartamentos, salvo pelo tempo necessário para sua remoção. A remoção do material não poderá ultrapassar 24:00 horas e, mesmo assim, não será permitido que seja colocado de modo a impedir a circulação normal das pessoas junto aos elevadores. Caso os entulhos removidos dos apartamentos sejam depositados em terrenos vizinhos, ocorrendo a autuação do condomínio pelos órgãos fiscalizadores do GDF, a mesma será revertida, com o respectivo valor da autuação, para o responsável, sujeitando-se o condômino, em qualquer hipótese, a aplicação, ainda, da maior multa prevista neste regulamento;
+21) manter ou guardar substâncias perigosas à segurança do edifício ou dos seus moradores, tais como produtos químicos, inflamáveis e explosivos; (D)
+22) fazer qualquer instalação que importe em sobrecarga para o edifício, quer de peso, quer de energia elétrica; (D)
+23) instalar aparelhos condicionadores de ar, em desacordo com as especificações técnicas de instalação determinada pelo condomínio e conforme determina ; (D)
+24) o acesso de moradores as chaves elétricas e medidores de luz e água de uso comum;
+25) o acesso de vendedores, pedintes, propagandistas e angariadores de donativos;
+26) colocar objetos visíveis da rua, tais como: roupas, calçados, vasos de plantas, etc, nos peitoris das janelas e varandas (salvo se as varandas estiverem fechadas no padrão estabelecido) ; (A)
+27) a permanência de animais nas áreas comuns do edifício; Utilizar a entrada social para transportar animais; Entrada ou saída de animais desacompanhados, sem coleiras, sujos e sem as devidas vacinas obrigatórias; e Comprometer a higiene do prédio, cabendo ao dono do animal providenciar, imediatamente, às suas expensas, a devida limpeza caso venha a ocorrer um imprevisto; e Transportar animais, bicicletas, compras e quaisquer outros objetos nos elevadores sociais. (B)
+28) a instalação de antenas de rádio amador que não estiverem de acordo com as determinações do DENTEL, assim como vistoriadas por comissão indicada pelo Síndico;
+29) a instalação de antenas de televisão individuais no alto do prédio, sem que sejam às do sistema de antenas coletivas, exceto as autorizadas, por escrito, pela Administração;
+30) fumar nos elevadores; (B)
+31) pichar as áreas internas ou externas do edifício. (D) e
+32) Utilizar para qualquer fim a laje externa adjacente à área de serviço do respectivo apartamento. É expressamente proibido fechar a referida área ou depositar no local utensílios domésticos, vasos de planta e/ou objetos de qualquer natureza, independente se possam ou não ser visíveis externamente. Tal descumprimento acarretará ao condômino infrator uma multa diária e consecutiva equivalente a Letra 'D' prevista no Art. 10 deste Regulamento, além do reembolso ao Condomínio pelas penalidades financeiras que poderão ser aplicadas ao mesmo pelos órgãos de fiscalização do GDF.
+"/>
+
+
+            </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>
