@@ -10,7 +10,263 @@
 
     <ContentPage.Content>
         <ScrollView>
+
             <StackLayout
+                Margin="20"
+                HorizontalOptions="Center">
+                
+                <Label
+                    Margin="10"
+                    FontSize="16"
+                    TextColor="Black"
+                    FontAttributes="Bold"
+                    HorizontalOptions="Center"
+                    Text="MODELO DE REGIMENTO INTERNO"/>
+
+                <Label
+                    Margin="10"
+                    FontSize="16"
+                    TextColor="Black"
+                    FontAttributes="Bold"
+                    HorizontalOptions="Center"
+                    Text="I - DISPOSIÇÕES GERAIS"/>
+
+                <Label 
+                    TextColor="Black"
+                    FontSize="16"
+                    Margin="0,10">
+                    <Label.FormattedText>
+                        <FormattedString  >
+                            <Span Text="Art. 1º - O presente Regulamento Interno do Condomínio do Edifício _____________ , tem por objetivo explicitar as normas que devem ser obedecidas por todos os moradores, sejam condôminos, inquilinos ou empregados, de acordo com as disposições contidas na Convenção." />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+
+                <Label 
+                    TextColor="Black"
+                    Margin="0,10"
+                    FontSize="16">
+                    <Label.FormattedText>
+                        <FormattedString  >
+                            <Span Text="Art. 2º- O cumprimento rigoroso das regras abaixo possibilitará uma convivência harmônica, equilibrada e confortável para todos os moradores." />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+
+                <Label
+                    Margin="10"
+                    FontSize="16"
+                    TextColor="Black"
+                    FontAttributes="Bold"
+                    HorizontalOptions="Center"
+                    Text="II - DOS DIREITOS"/>
+
+                <Label 
+                    TextColor="Black"
+                    Margin="0,10"
+                    FontSize="16">
+                    <Label.FormattedText>
+                        <FormattedString  >
+                            <Span Text="Art. 3º - São direitos de cada condômino:" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+
+                <Label 
+                    TextColor="Black"
+                    FontSize="16">
+                    <Label.FormattedText>
+                        <FormattedString  >
+                            <Span Text="1) usar, gozar e dispor da respectiva unidade autônoma, de acordo com o seu destino, nas condições previstas na Escritura de Convenção e neste Regulamento;" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+
+                <Label 
+                    TextColor="Black"
+                    FontSize="16">
+                    <Label.FormattedText>
+                        <FormattedString  >
+                            <Span Text="2) usar e gozar das partes de uso comum do edifício, da garagem e da circulação, desde que não impeça idêntico uso e gozo pelos demais condôminos, obedecendo os dispostos deste Regulamento;" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+
+                <Label 
+                    TextColor="Black"
+                    FontSize="16">
+                    <Label.FormattedText>
+                        <FormattedString  >
+                            <Span Text="3) denunciar ao Síndico, exclusivamente por escrito, todas e quaisquer irregularidades que observe ou de que esteja sendo vítima;" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+
+                <Label 
+                    TextColor="Black"
+                    FontSize="16">
+                    <Label.FormattedText>
+                        <FormattedString  >
+                            <Span Text="4) propor modificação na Convenção e neste Regulamento;" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+
+                <Label 
+                    TextColor="Black"
+                    FontSize="16">
+                    <Label.FormattedText>
+                        <FormattedString  >
+                            <Span Text="5) comparecer às Assembleias Gerais, discutir, votar e ser votado, obedecidas as regras da Convenção e deste Regulamento;" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+
+                <Label 
+                    TextColor="Black"
+                    FontSize="16">
+                    <Label.FormattedText>
+                        <FormattedString  >
+                            <Span Text="6) acesso a todo acervo de documentos concernentes ao condomínio;" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+
+                <Label 
+                    TextColor="Black"
+                    Margin="0,10"
+                    FontSize="16">
+                    <Label.FormattedText>
+                        <FormattedString  >
+                            <Span Text="7) exigir tratamento respeitoso do zelador e empregados do condomínio, encaminhando ao Síndico, por escrito, eventuais pedidos de aplicação das pertinentes penas disciplinares, quando for o caso." />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+
+                <Label
+                    Margin="10"
+                    FontSize="16"
+                    TextColor="Black"
+                    FontAttributes="Bold"
+                    HorizontalOptions="Center"
+                    Text="III - DAS OBRIGAÇÕES"/>
+
+                <Label 
+                    TextColor="Black"
+                    Margin="0,10"
+                    FontSize="16">
+                    <Label.FormattedText>
+                        <FormattedString  >
+                            <Span Text="Art. 4º - É obrigação inalienável, de cada um, cumprir as regras de interesse comum, aqui estabelecidas." />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+
+                <Label
+                    Margin="10"
+                    FontSize="16"
+                    TextColor="Black"
+                    FontAttributes="Bold"
+                    HorizontalOptions="Center"
+                    Text="IV - DAS PROIBIÇÕES"/>
+
+                <Label 
+                    TextColor="Black"
+                    FontSize="16">
+                    <Label.FormattedText>
+                        <FormattedString  >
+                            <Span Text="Art. 5º - É proibido:" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+
+                <Label 
+                    TextColor="Black"
+                    FontSize="16">
+                    <Label.FormattedText>
+                        <FormattedString  >
+                            <Span Text="01) utilizar, alugar, ceder, explorar, no todo ou em parte, o apartamento para fins que não sejam estritamente residenciais;" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+
+                <Label 
+                    TextColor="Black"
+                    FontSize="16">
+                    <Label.FormattedText>
+                        <FormattedString  >
+                            <Span Text="02) o acesso de condôminos e/ou visitantes vestindo trajes de banho e similares pelas entradas e elevadores sociais do edifício;" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+
+                <Label 
+                    TextColor="Black"
+                    FontSize="16">
+                    <Label.FormattedText>
+                        <FormattedString  >
+                            <Span Text="03) alugar, ceder ou emprestar o apartamento para promover festividades e reuniões susceptíveis de perturbarem a tranquilidade ou o sossego dos demais moradores;" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+
+                <Label 
+                    TextColor="Black"
+                    FontSize="16">
+                    <Label.FormattedText>
+                        <FormattedString  >
+                            <Span Text="04) utilizar os empregados do edifício para serviços particulares, durante o expediente normal de trabalho;" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+
+                <Label 
+                    TextColor="Black"
+                    FontSize="16">
+                    <Label.FormattedText>
+                        <FormattedString  >
+                            <Span Text="05) é expressamente proibido a instalação de toldos, cortinas, sombreiros e/ou quaisquer objetos visíveis externamente, nas varandas e janelas dos apartamentos;" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+
+                <Label 
+                    TextColor="Black"
+                    FontSize="16">
+                    <Label.FormattedText>
+                        <FormattedString  >
+                            <Span Text="06) fechamento das varandas em descumprimento ao padrão definido conforme a seguir: vidro temperado de, no mínimo, 08mm na cor bronze, toda a estrutura linear, ferragens, trincos, fechaduras e similares na cor anodizado bronze. É expressamente proibido o fechamento parcial de qualquer uma das varandas do apartamento, não sendo aceito nenhum tipo de argumento sobre o assunto;" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+
+                <!--<StackLayout>
+                    <Label
+                    Text="II - DOS DIREITOS"/>
+
+                    <Label >
+                    <Label.FormattedText>
+                        <FormattedString  >
+                            <Span Text="" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+
+                <Label >
+                    <Label.FormattedText>
+                        <FormattedString  >
+                            <Span Text="" />
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>-->
+
+
+
+
+            </StackLayout>
+            
+           
+            <!--<StackLayout
                 BackgroundColor="White"
             Margin="10,30"
             HorizontalOptions="CenterAndExpand"
@@ -132,7 +388,7 @@ parágrafo único: se 03 (três) ou mais condôminos se sentirem incomodados ou 
 "/>
 
 
-            </StackLayout>
+            </StackLayout>-->
         </ScrollView>
     </ContentPage.Content>
 </ContentPage>
