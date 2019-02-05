@@ -47,10 +47,10 @@ namespace MeuPredio.Views
 
         }
 
-        protected override bool OnBackButtonPressed() // Desativa o botão de voltar
-        {
-            PopupNavigation.PopAsync();
-            return false;
-        }
+        //protected override bool OnBackButtonPressed() // Desativa o botão de voltar
+        //{
+        //    PopupNavigation.PopAsync();
+        //    return false;
+        //}
     }
 }

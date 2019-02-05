@@ -1,12 +1,5 @@
 ﻿using MeuPredio.Helpers;
 using MeuPredio.ViewModels;
-using MeuPredio.ViewModels.Classes;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -26,11 +19,16 @@ namespace MeuPredio.Views
             GoLogin();
         }
 
+        static bool controle;
         private async void GoLogin()
         {
-            _loginHelper.VerificarLogin();
+            if (controle == false)
+            {
+                await Detail.Navigation.PushModalAsync(new LoginPage());
+                controle = true;
+            }
+            // _loginHelper.VerificarLogin();
             //    if (status == false)
-            await Detail.Navigation.PushModalAsync(new LoginPage());
         }
     }
 }

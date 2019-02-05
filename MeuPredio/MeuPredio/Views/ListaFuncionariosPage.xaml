@@ -60,6 +60,8 @@
                                         <ColumnDefinition Width="20"/>
                                     </Grid.ColumnDefinitions>
 
+                                    
+                                    
                                     <controls:CircleImage
                                         HorizontalOptions="StartAndExpand"
                                         BorderColor="#65B980"
@@ -68,8 +70,8 @@
                                         Source="{Binding Imagem}"
                                         HeightRequest="55"/>
 
-                                   
 
+                                    
                                     <Label
                                         FontSize="16"
                                         VerticalOptions="Center"

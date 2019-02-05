@@ -1,0 +1,97 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage 
+    xmlns="http://xamarin.com/schemas/2014/forms"
+     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:MeuPredio.Helpers.Behaviors"
+    xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
+    x:Class="MeuPredio.Views.AtendimentoConcluidoPage">
+
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <local:SelectedItemEventArgsToSelectedItemConverter x:Key="SelectedItemConverter" />
+            <local:ItemTappedEventArgsToItemTappedConverter x:Key="ItemTappedConverter" />
+            <local:DatetimeToStringConverter x:Key="cnvDateTimeConverter"/>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+
+    <ContentPage.Content>
+
+        <StackLayout
+            BackgroundColor="#f3f6f9">
+
+            <ListView
+                CachingStrategy ="RecycleElement"
+                HasUnevenRows="True"  
+                IsRefreshing="{Binding IsRunning}"
+                IsVisible="True"
+                SelectionMode="None"
+                ItemsSource="{Binding ListaAtendimento}">
+
+
+                <!-- ###########################################-->
+                <!-- ################  Behaviors ##################-->
+                <ListView.Behaviors>
+                    <local:EventToCommandBehavior
+                                
+                                EventName="ItemTapped" 
+                                Command="{Binding NavigationCommand, Mode=TwoWay}"
+                                Converter="{StaticResource ItemTappedConverter}" />
+                </ListView.Behaviors>
+                <!-- ################ FIM  Behaviors ##############-->
+                <!-- ###########################################-->
+
+                <!-- HasUnevenRows  true - tamanho de acordo com a quantidade. false - um linha apenas-->
+
+
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Frame
+                                BackgroundColor="#ffffff"
+                                Margin="5">
+                                <StackLayout>
+                                    <Grid
+                                        Margin="10">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="Auto"/>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="Auto"/>
+                                        </Grid.ColumnDefinitions>
+
+                                        <Label
+                                            HorizontalOptions="Start"
+                                            Grid.Column="0"
+                                            FontSize="25"
+                                            Text="{Binding Icone }"
+                                            Style="{StaticResource MainMenuIconsStyle}"/>
+
+                                        
+
+                                        <Label
+                                            Grid.Column="1"
+                                            Text="{Binding Descricao }"
+                                            FontSize="14"/>
+
+
+
+                                        <Label 
+                                            Margin="-16,-15"
+                                            VerticalOptions="Start"
+                                            HorizontalOptions="End"
+                                            Grid.Column="2"
+                                            Text="{Binding Data, StringFormat='{}{0:dd/MM/yy}'}" />
+
+                                    </Grid>
+
+                                </StackLayout>
+                            </Frame>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,15 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage 
+<TabbedPage  
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="MeuPredio.Views.AtendimentosPage"
+     xmlns:tabs="clr-namespace:MeuPredio.Views"
     Title="Reparo / Obras">
-    
-    
-    
-    <ContentPage.Content>
-        <StackLayout>
-           
-        </StackLayout>
-    </ContentPage.Content>
-</ContentPage>
+
+
+
+    <tabs:AtendimentoConcluidoPage Title="Concluido" Icon="baseline_thumb_down_white_24.png"/>
+    <tabs:AtendimentoEmAndamentoPage Title="Em Andamento" Icon="ideaWhite.png"/>
+
+</TabbedPage>
