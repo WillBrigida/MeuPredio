@@ -3,12 +3,16 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     x:Class="MeuPredio.Views.AtendimentosPage"
-     xmlns:tabs="clr-namespace:MeuPredio.Views"
-    Title="Reparo / Obras">
+    xmlns:tabs="clr-namespace:MeuPredio.Views"
+    Title="Reparos / Obras"
+    xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
+    android:TabbedPage.ToolbarPlacement="Bottom"
+    android:TabbedPage.BarItemColor="#66FFFFFF"
+    android:TabbedPage.BarSelectedItemColor="White"
+    BarBackgroundColor="#2196F3"
+    BarTextColor="White">
 
-
-
-    <tabs:AtendimentoConcluidoPage Title="Concluido" Icon="baseline_thumb_down_white_24.png"/>
-    <tabs:AtendimentoEmAndamentoPage Title="Em Andamento" Icon="ideaWhite.png"/>
+    <tabs:AtendimentoEmAndamentoPage Title="Em Andamento" Icon="baseline_warning_white_24.png"/>
+    <tabs:ListaAtendimentoPage Title="Concluido" Icon="baseline_done_white_24.png"/>
 
 </TabbedPage>

@@ -9,5 +9,6 @@ namespace MeuPredio.Models
         public string Descricao { get; set; }
         public DateTime Data { get; set; }
         public string Icone { get; set; }
+        public string Status { get; set; }
     }
 }

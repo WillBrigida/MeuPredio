@@ -29,6 +29,11 @@ namespace MeuPredio.Views
         //    await ViewModel.LoadAsync();
         //}
 
+        protected override bool OnBackButtonPressed() // Desativa o botão de voltar
+        {
+            return true;
+        }
+
     }
 }
 

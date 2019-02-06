@@ -16,5 +16,10 @@ namespace MeuPredio.Views
 		{
 			InitializeComponent ();
 		}
-	}
+
+        protected override bool OnBackButtonPressed() // Desativa o botão de voltar
+        {
+            return true;
+        }
+    }
 }

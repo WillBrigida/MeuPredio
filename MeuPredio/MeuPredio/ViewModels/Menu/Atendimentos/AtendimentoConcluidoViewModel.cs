@@ -4,6 +4,8 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Text;
+using System.Windows.Input;
+using Xamarin.Forms;
 
 namespace MeuPredio.ViewModels.Menu.Atendimentos
 {
@@ -11,15 +13,20 @@ namespace MeuPredio.ViewModels.Menu.Atendimentos
     {
         #region Propriedade
         public ObservableCollection<Atendimento> ListaAtendimento { get; set; }
+        readonly DetalheAtendimentoViewModel detalheAtendimentoViewModel;
         #endregion
 
         #region Commands
+        
+        public ICommand NavigationCommand { get { return new Command<Atendimento>(OnNavigationExecute);}}
 
         #endregion
 
         #region Construtor
         public AtendimentoConcluidoViewModel()
         {
+            detalheAtendimentoViewModel = new DetalheAtendimentoViewModel();
+
             ListaAtendimento = new ObservableCollection<Atendimento>();
             ListaAtend();
         }
@@ -36,6 +43,11 @@ namespace MeuPredio.ViewModels.Menu.Atendimentos
                new Atendimento{Icone = FontAwesome.CheckCircle, Descricao = "Reforma Elevadores", Data = new DateTime(2019, 02, 05)},
                new Atendimento{Icone = FontAwesome.CheckCircle, Descricao = "Obra Estrutura", Data = new DateTime(2019, 02, 05)},
            };
+        }
+
+        private void OnNavigationExecute(Atendimento atendimento)
+        {
+            detalheAtendimentoViewModel.SetDetalhe(atendimento);
         }
         #endregion
     }

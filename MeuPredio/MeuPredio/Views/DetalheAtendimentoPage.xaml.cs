@@ -1,4 +1,4 @@
-﻿using MeuPredio.ViewModels.Menu.Atendimentos;
+﻿using MeuPredio.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,13 +11,12 @@ using Xamarin.Forms.Xaml;
 namespace MeuPredio.Views
 {
 	[XamlCompilation(XamlCompilationOptions.Compile)]
-	public partial class AtendimentoEmAndamentoPage : ContentPage
+	public partial class DetalheAtendimentoPage : ContentPage
 	{
-		public AtendimentoEmAndamentoPage ()
+		public DetalheAtendimentoPage ()
 		{
 			InitializeComponent ();
-            this.BindingContext = new AtendimentoEmAndamentoViewModel();
-
+            this.BindingContext = new DetalheAtendimentoViewModel();
         }
 	}
 }

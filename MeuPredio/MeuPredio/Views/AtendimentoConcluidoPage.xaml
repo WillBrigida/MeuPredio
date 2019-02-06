@@ -22,6 +22,7 @@
             BackgroundColor="#f3f6f9">
 
             <ListView
+                SeparatorVisibility="None"
                 CachingStrategy ="RecycleElement"
                 HasUnevenRows="True"  
                 IsRefreshing="{Binding IsRunning}"
@@ -50,18 +51,24 @@
                         <ViewCell>
                             <Frame
                                 BackgroundColor="#ffffff"
-                                Margin="5">
-                                <StackLayout>
+                                Margin="5"
+                                Padding="0">
+                                <StackLayout
+                                    Padding="0,20"
+                                    HorizontalOptions="Center"
+                                    >
                                     <Grid
                                         Margin="10">
                                         <Grid.ColumnDefinitions>
-                                            <ColumnDefinition Width="Auto"/>
+                                            <ColumnDefinition Width="40"/>
                                             <ColumnDefinition Width="*"/>
                                             <ColumnDefinition Width="Auto"/>
                                         </Grid.ColumnDefinitions>
 
                                         <Label
-                                            HorizontalOptions="Start"
+                                            TextColor="Green"
+                                            VerticalOptions="Center"
+                                            HorizontalOptions="Center"
                                             Grid.Column="0"
                                             FontSize="25"
                                             Text="{Binding Icone }"
@@ -70,6 +77,7 @@
                                         
 
                                         <Label
+                                            VerticalOptions="Center"
                                             Grid.Column="1"
                                             Text="{Binding Descricao }"
                                             FontSize="14"/>
@@ -77,9 +85,12 @@
 
 
                                         <Label 
-                                            Margin="-16,-15"
+                                            TextColor="Gray"
+                                            Margin="0,-20"
                                             VerticalOptions="Start"
                                             HorizontalOptions="End"
+                                            FontSize="11"
+                                            FontAttributes="Bold"
                                             Grid.Column="2"
                                             Text="{Binding Data, StringFormat='{}{0:dd/MM/yy}'}" />
 

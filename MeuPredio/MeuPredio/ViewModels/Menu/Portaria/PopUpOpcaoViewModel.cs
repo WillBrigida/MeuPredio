@@ -70,7 +70,7 @@ namespace MeuPredio.ViewModels.Menu.Portaria
         #region Construtor
         public PopUpOpcaoViewModel()
         {
-            TextButtonWp = "Enviar mensagem para o Sr "+ nome;
+            TextButtonWp = "Enviar mensagem para o Sr " + nome;
             TextButtonTp = "Ligar para o Sr " + nome;
             TextButtonTP = "Ligar para Portaria";
         }
@@ -91,13 +91,14 @@ namespace MeuPredio.ViewModels.Menu.Portaria
         {
             try
             {
-                Chat.Open("51" + telPessoal, "Olá senhor "+nome );
+                Chat.Open("51" + telPessoal, "Olá senhor " + nome);
             }
             catch (Exception ex)
             {
                 await App.Current.MainPage.DisplayAlert("Erro", ex.Message, "OK");
             }
             await PopupNavigation.PopAsync();
+
         }
 
         private async void OnLigarExecute(object obj)
@@ -142,6 +143,8 @@ namespace MeuPredio.ViewModels.Menu.Portaria
 
             await PopupNavigation.PopAsync();
         }
+
+
 
         #endregion
     }

@@ -10,7 +10,7 @@ using Xamarin.Forms;
 
 namespace MeuPredio.ViewModels.Menu.Atendimentos
 {
-    public class AtendimentoEmAndamentoViewModel : BaseViewModel
+    public class ListaAtendimentoViewModel : BaseViewModel
     {
         #region Propriedade
         public ObservableCollection<Atendimento> ListaAtendimento { get; set; }
@@ -24,7 +24,7 @@ namespace MeuPredio.ViewModels.Menu.Atendimentos
         #endregion
 
         #region Construtor
-        public AtendimentoEmAndamentoViewModel()
+        public ListaAtendimentoViewModel()
         {
             detalheAtendimentoViewModel = new DetalheAtendimentoViewModel();
 
@@ -52,9 +52,11 @@ namespace MeuPredio.ViewModels.Menu.Atendimentos
                new Atendimento{Status = EnumStatus.Fechado.ToString(), Icone = FontAwesome.ExclamationTriangle, Descricao = "Reforma Elevadores", Data = new DateTime(2019, 02, 05)},
                new Atendimento{Status = EnumStatus.Fechado.ToString(), Icone = FontAwesome.ExclamationTriangle, Descricao = "Obra Estrutura", Data = new DateTime(2019, 02, 05)},
            };
-            return ListaAtendimento.Where(l => l.Status == "Fechado").ToList();
+
+            return ListaAtendimento.Where(l => l.Status == "Aberto").ToList();
         }
 
+        
 
         #endregion
     }
