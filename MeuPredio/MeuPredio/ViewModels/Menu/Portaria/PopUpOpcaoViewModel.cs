@@ -91,7 +91,7 @@ namespace MeuPredio.ViewModels.Menu.Portaria
         {
             try
             {
-                Chat.Open("51" + telPessoal, "Olá senhor " + nome);
+                Chat.Open("55" + telPessoal, "Olá senhor " + nome);
             }
             catch (Exception ex)
             {

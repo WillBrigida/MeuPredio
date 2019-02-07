@@ -1,4 +1,5 @@
 ﻿using MeuPredio.Models;
+using MeuPredio.Services;
 using MeuPredio.ViewModels.Menu.Portaria;
 using MeuPredio.Views;
 using Rg.Plugins.Popup.Services;
@@ -99,6 +100,7 @@ namespace MeuPredio.ViewModels
 
         public EnumStatus StatusTeste { get; set; }
         readonly PopUpOpcaoViewModel popUpOpcaoViewModel;
+        private ApiService apiService;
 
         #endregion
 
@@ -114,10 +116,12 @@ namespace MeuPredio.ViewModels
 
         public ListaFuncionariosViewModel()
         {
+            apiService = new ApiService();
             ListaFuncionarios = new ObservableCollection<Funcionarios>();
             popUpOpcaoViewModel = new PopUpOpcaoViewModel();
-            ListaFunc();
-            TesteList();
+            //ListaFunc();
+            //TesteList();
+            LoadFuncionarios();
 
 
             this.Nome = nome + " " + sobrenome;
@@ -165,6 +169,32 @@ namespace MeuPredio.ViewModels
 
            };
             IsRunning = false;
+        }
+
+        private async void LoadFuncionarios()
+        {
+            this.IsRunning = true;
+            var funcionarios = await apiService.Get<Funcionarios>("http://backandmeupredio20190207010730.azurewebsites.net", "/api", "/Funcionarios");
+            ConverterFuncionarios(funcionarios);
+            this.IsRunning = false;
+        }
+
+        private void ConverterFuncionarios(List<Funcionarios> funcionarios)
+        {
+            ListaFuncionarios.Clear();
+            foreach (var item in funcionarios)
+            {
+                ListaFuncionarios.Add(new Funcionarios
+                {
+                    NomePessoa = item.NomePessoa,
+                    SobrenomePessoa = item.SobrenomePessoa,
+                    FuncaoFuncionario = item.FuncaoFuncionario,
+                    Descricao = item.Descricao,
+                    Status = item.Status,
+                    Imagem = item.Imagem,
+                    TelefonePessoa = item.TelefonePessoa,
+                });
+            }
         }
 
         private void OnNavigationExecute(Funcionarios funcionarios)
