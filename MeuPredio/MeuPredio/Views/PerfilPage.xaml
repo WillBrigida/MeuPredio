@@ -62,14 +62,14 @@
                                 TextColor="gray"
                                 HorizontalOptions="Center"
                                 FontSize="15"
-                                Text="{Binding Funcao}"/>
+                                Text="{Binding Funcao, Mode=TwoWay}"/>
 
 
                             <controls:CircleImage
                                 Grid.Row="2"
                                 BorderColor="#65B980"
                                 BorderThickness="3" 
-                                Source="{Binding Imagem}" 
+                                Source="{Binding Imagem, Mode=TwoWay}" 
                                 WidthRequest="120" 
                                 HeightRequest="120" />
 

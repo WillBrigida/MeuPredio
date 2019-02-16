@@ -11,13 +11,7 @@ namespace MeuPredio.Models
         public string NomePessoa { get; set; }
         public string SobrenomePessoa { get; set; }
         public string TelefonePessoa { get; set; }
-        public string EmailPessoa { get; set; }
-
-        //public Pessoas(string nome,string sobrenome)
-        //{
-        //    this.NomePessoa = nome;
-        //    this.SobrenomePessoa = sobrenome;
-        //}
+        
 
         public override string ToString()
         {

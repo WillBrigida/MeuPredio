@@ -67,8 +67,9 @@
                                         BorderColor="#65B980"
                                         BorderThickness="1" 
                                         Aspect="AspectFill" 
-                                        Source="{Binding Imagem}"
-                                        HeightRequest="55"/>
+                                        Source="{Binding ImagemFullPath}"
+                                        WidthRequest="60"
+                                        HeightRequest="60"/>
 
 
                                     
@@ -78,7 +79,7 @@
                                         Margin="5,0"
                                         HorizontalOptions="StartAndExpand"
                                         Grid.Column="1"
-                                        Text="{Binding NomePessoa }"/>
+                                        Text="{Binding NomeFuncionario }"/>
                                     
                                 </Grid>
                             </StackLayout>

@@ -81,9 +81,9 @@ namespace MeuPredio.ViewModels.Menu.Portaria
 
         public void InfoFuncionario(Funcionarios funcionario)
         {
-            telPessoal = funcionario.TelefonePessoa;
+            telPessoal = funcionario.TelefoneFuncionario;
             TelPortaria = this.TelPortaria;
-            nome = funcionario.NomePessoa;
+            nome = funcionario.NomeFuncionario;
         }
 
 

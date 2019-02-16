@@ -3,10 +3,8 @@ using MeuPredio.Services;
 using MeuPredio.ViewModels.Menu.Portaria;
 using MeuPredio.Views;
 using Rg.Plugins.Popup.Services;
-using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Text;
 using System.Windows.Input;
 using Xamarin.Forms;
 
@@ -137,44 +135,44 @@ namespace MeuPredio.ViewModels
 
         #region Métodos
 
-        private void ListaFunc()
-        {
-            IsRunning = true;
+        //private void ListaFunc()
+        //{
+        //    IsRunning = true;
 
-            ListaFuncionarios = new ObservableCollection<Funcionarios>()
-           {
-               new Funcionarios{ NomePessoa = "Robson", SobrenomePessoa = "Sobrenome",
-              TelefonePessoa = "(21) 90000 - 0000", Descricao = "Expediente: Seg à Sex, 7:00 às 15:00 e Sab/Dom alternados de 7:00 às 17:00",
-             FuncaoFuncionario = "Porteiro Chefe", EmailPessoa = "jose_silva@gmail.com", Imagem = "fot1" },
+        //    ListaFuncionarios = new ObservableCollection<Funcionarios>()
+        //   {
+        //       new Funcionarios{ NomePessoa = "Robson", SobrenomePessoa = "Sobrenome",
+        //      TelefonePessoa = "(21) 90000 - 0000", DescricaoFuncionario = "Expediente: Seg à Sex, 7:00 às 15:00 e Sab/Dom alternados de 7:00 às 17:00",
+        //     FuncaoFuncionario = "Porteiro Chefe",  = "jose_silva@gmail.com", ImagemFuncionario = "fot1" },
 
-                new Funcionarios{ NomePessoa = "Raimundo", SobrenomePessoa = "Sobrenome",
-              TelefonePessoa = "(21) 90000 - 0000", Descricao = "Expediente: 12x36 – 19:00 às 07:00h",
-             FuncaoFuncionario = "Porteiro Noturno", EmailPessoa = "marcos@hotmailmail.com", Imagem = "fot2"},
+        //        new Funcionarios{ NomePessoa = "Raimundo", SobrenomePessoa = "Sobrenome",
+        //      TelefonePessoa = "(21) 90000 - 0000", Descricao = "Expediente: 12x36 – 19:00 às 07:00h",
+        //     FuncaoFuncionario = "Porteiro Noturno", EmailPessoa = "marcos@hotmailmail.com", Imagem = "fot2"},
 
-                 new Funcionarios{ NomePessoa = "Everaldo", SobrenomePessoa = "Sobrenome",
-              TelefonePessoa = "(21) 90000 - 0000", Descricao = "Expediente: 12x36 – 19:00 às 07:00h",
-             FuncaoFuncionario = "Porteiro Noturno", EmailPessoa = "jose_silva@gmail.com", Imagem = "fot1"},
+        //         new Funcionarios{ NomePessoa = "Everaldo", SobrenomePessoa = "Sobrenome",
+        //      TelefonePessoa = "(21) 90000 - 0000", Descricao = "Expediente: 12x36 – 19:00 às 07:00h",
+        //     FuncaoFuncionario = "Porteiro Noturno", EmailPessoa = "jose_silva@gmail.com", Imagem = "fot1"},
 
-                  new Funcionarios{ NomePessoa = "Vitor", SobrenomePessoa = "Sobrenomeo",
-              TelefonePessoa = "(21) 90000 - 0000", Descricao = "Expediente 12x36 – 07:00 às 19:00h",
-             FuncaoFuncionario = "Porteiro Diurno", EmailPessoa = "jose_silva@gmail.com", Imagem = "fot2"},
+        //          new Funcionarios{ NomePessoa = "Vitor", SobrenomePessoa = "Sobrenomeo",
+        //      TelefonePessoa = "(21) 90000 - 0000", Descricao = "Expediente 12x36 – 07:00 às 19:00h",
+        //     FuncaoFuncionario = "Porteiro Diurno", EmailPessoa = "jose_silva@gmail.com", Imagem = "fot2"},
 
-                   new Funcionarios{ NomePessoa = "Guilherme", SobrenomePessoa = "Sobrenome",
-              TelefonePessoa = "(21) 90000 - 0000", Descricao = "Expediente Seg à Sex, 23:00 à 01:00 e Sab/Dom alternados de 23:00 à 01:00",
-             FuncaoFuncionario = "Folguista", EmailPessoa = "jose_silva@gmail.com", Imagem = "fot1"},
+        //           new Funcionarios{ NomePessoa = "Guilherme", SobrenomePessoa = "Sobrenome",
+        //      TelefonePessoa = "(21) 90000 - 0000", Descricao = "Expediente Seg à Sex, 23:00 à 01:00 e Sab/Dom alternados de 23:00 à 01:00",
+        //     FuncaoFuncionario = "Folguista", EmailPessoa = "jose_silva@gmail.com", Imagem = "fot1"},
 
-                     new Funcionarios{ NomePessoa = "Ediclaudio", SobrenomePessoa = "Sobrenome",
-              TelefonePessoa = "(21) 90000 - 0000", Descricao = "Expediente Seg à Sab 07:00 às 16:00h",
-             FuncaoFuncionario = "Limpeza", EmailPessoa = "jose_silva@gmail.com", Imagem = "fot2"},
+        //             new Funcionarios{ NomePessoa = "Ediclaudio", SobrenomePessoa = "Sobrenome",
+        //      TelefonePessoa = "(21) 90000 - 0000", Descricao = "Expediente Seg à Sab 07:00 às 16:00h",
+        //     FuncaoFuncionario = "Limpeza", EmailPessoa = "jose_silva@gmail.com", Imagem = "fot2"},
 
-           };
-            IsRunning = false;
-        }
+        //   };
+        //    IsRunning = false;
+        //}
 
         private async void LoadFuncionarios()
         {
             this.IsRunning = true;
-            var funcionarios = await apiService.Get<Funcionarios>("http://backandmeupredio20190207010730.azurewebsites.net", "/api", "/Funcionarios");
+            var funcionarios = await apiService.Get<Funcionarios>("https://backandmeupredio2.azurewebsites.net/", " /api", "/Funcionarios");
             ConverterFuncionarios(funcionarios);
             this.IsRunning = false;
         }
@@ -186,13 +184,16 @@ namespace MeuPredio.ViewModels
             {
                 ListaFuncionarios.Add(new Funcionarios
                 {
-                    NomePessoa = item.NomePessoa,
-                    SobrenomePessoa = item.SobrenomePessoa,
+                    
+                    NomeFuncionario = item.NomeFuncionario,
+                    SobrenomeFuncionario = item.SobrenomeFuncionario,
                     FuncaoFuncionario = item.FuncaoFuncionario,
-                    Descricao = item.Descricao,
-                    Status = item.Status,
-                    Imagem = item.Imagem,
-                    TelefonePessoa = item.TelefonePessoa,
+                    DescricaoFuncionario = item.DescricaoFuncionario,
+                    StatusFuncionario = item.StatusFuncionario,
+                    TelefoneFuncionario = item.TelefoneFuncionario,
+                    ObservaçãoFuncionario = item.ObservaçãoFuncionario,
+                    ImagemFuncionario = item.ImagemFuncionario,
+                   
                 });
             }
         }
@@ -201,13 +202,12 @@ namespace MeuPredio.ViewModels
         {
             var mdp = (App.Current.MainPage as MasterDetailPage);
             var navPage = mdp.Detail as NavigationPage;
-            nome = funcionarios.NomePessoa;
+            nome = funcionarios.NomeFuncionario;
             funcao = funcionarios.FuncaoFuncionario;
-            sobrenome = funcionarios.SobrenomePessoa;
-            telefone = funcionarios.TelefonePessoa;
-            email = funcionarios.EmailPessoa;
-            imagem = funcionarios.Imagem;
-            descricao = funcionarios.Descricao;
+            sobrenome = funcionarios.SobrenomeFuncionario;
+            telefone = funcionarios.TelefoneFuncionario;
+            imagem = funcionarios.ImagemFullPath;
+            descricao = funcionarios.DescricaoFuncionario;
             contador = 0;
             Init();
             popUpOpcaoViewModel.InfoFuncionario(funcionarios);
@@ -245,7 +245,7 @@ namespace MeuPredio.ViewModels
             var lista = ListaFuncionarios;
             foreach (var item in lista)
             {
-                itemLista = item.NomePessoa[0].ToString();
+                itemLista = item.NomeFuncionario[0].ToString();
             }
         }
 
