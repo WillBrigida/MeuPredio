@@ -7,96 +7,71 @@
     xmlns:xfx="clr-namespace:Xfx;assembly=Xfx.Controls" 
     NavigationPage.HasNavigationBar="False">
 
+    <controls:KeyboadLogin Padding="0,40,0,0"
+                           VerticalOptions="FillAndExpand">
 
 
-    <AbsoluteLayout>
-      
 
-        <!--<Image 
-            x:Name="Logo" 
-            AbsoluteLayout.LayoutFlags="All"
-            AbsoluteLayout.LayoutBounds=".5,.5,.6,.6"
-            Source="logo.png"/>-->
-
-
-        <StackLayout>
             <Grid
-            RowSpacing="25">
+                RowSpacing="20">
 
                 <Grid.RowDefinitions>
-                    <RowDefinition Height="40" />
-                    <RowDefinition Height="100"/>
-                    <RowDefinition Height="Auto"/>
-                </Grid.RowDefinitions>
+                <RowDefinition Height="30"/>
+                <RowDefinition Height="Auto" />
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="50"/>
+                    <RowDefinition Height="60"/>
+                    <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
 
                
-                <!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
-                <!-- ###########################################-->
-                <!-- ################  IMAGEM ##################-->
+               
+                
                 
                 <Image
                     Grid.Row="1"
                     Source="logo"
-                    HeightRequest="40"
-                    WidthRequest="40"/>
+                    HorizontalOptions="Center"
+                    HeightRequest="100"
+                    WidthRequest="100"/>
 
-                <!-- ################ FIM  IMAGEM ##############-->
-                <!-- ###########################################-->
-                <!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
                
 
 
-                <StackLayout
-                    Grid.Row="2"
-                    Spacing="15"
-                    Padding="20"
-                    VerticalOptions="EndAndExpand"
-                    HorizontalOptions="FillAndExpand">
-
-                    <!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
-                    <!-- ###########################################-->
-                    <!-- ############### LOGIN #####################-->
-
-                    
                         <xfx:XfxEntry
+                            Margin="30, 0"
+                            Grid.Row="2"
                             Text="{Binding Login}"
-                            Margin="30,-20,30,0"
-                            VerticalOptions="Center"
+                            VerticalOptions="CenterAndExpand"
                             Keyboard="Email"
                             Placeholder=" Login"
                             TextColor="Black"/>
 
-                    <!-- ################ FIM  LOGIN ###############-->
-                    <!-- ###########################################-->
-                    <!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
-                    <!-- ###########################################-->
-                    <!-- ############### SENHA #####################-->
+                   
 
 
                     <xfx:XfxEntry
+                        Margin="30,0"
+                        Grid.Row="3"
                         Text="{Binding Senha}"
-                        Margin="30,-30,30,0"
                         IsPassword="True"
                         Placeholder=" Senha"
                         TextColor="Black"/>
 
-                    <!-- ################ FIM  SENHA ###############-->
-                    <!-- ###########################################-->
-                    <!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
+                   
                     
-                    
-                    <StackLayout>
+                    <StackLayout
+                        IsVisible="False"
+                        Margin="30,-50, 30, 0"
+                        Grid.Row="4">
                         <Grid
-                            Margin="20,10,0,0"
                         ColumnSpacing="0">
                             <Grid.ColumnDefinitions>
                                 <ColumnDefinition Width="60"/>
                                 <ColumnDefinition Width="*"/>
                             </Grid.ColumnDefinitions>
 
-                            <!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
-                            <!-- ###########################################-->
-                            <!-- ############### Switch ##############-->
+                           
                             
                             <Switch
                                 IsToggled="{Binding LembrarSenha}"
@@ -115,89 +90,36 @@
                                 FontSize="Small"
                                 Text="Lembrar minha senha"/>
 
-                            <!-- ############ FIM Switch ###################-->
-                            <!-- ###########################################-->
-                            <!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
+                           
 
 
                         </Grid>
                     </StackLayout>
 
-                    <!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
-                    <!-- ###########################################-->
-                    <!-- ############### BOTÃO LOGIN ##############-->
                     
                     <Button 
-                        Margin="0,20"
+                        Grid.Row="5"
                         Text="entrar"
+                        VerticalOptions="EndAndExpand"
                         FontSize="14"
                         BackgroundColor="#49a4aa"
-                        CornerRadius="21"
-                        Padding="70,0"
-                        HeightRequest="42"
+                        HeightRequest="60"
                         TextColor="White"
                         FontAttributes="Bold"
-                        HorizontalOptions="Center"
                         Command="{Binding LoginCommand}"  />
 
 
-                    <!-- ############### LOAD BOTÃO LOGIN ##############-->
                     <ActivityIndicator
-                        Margin="150,-68,0,0"
+                        Grid.Row="5"
+                        VerticalOptions="EndAndExpand"
                         HorizontalOptions="Center"
                         Color="White"
                         HeightRequest="25"
                         IsRunning="{Binding IsRunning}"/>
-                    <!-- ############### FIM LOAD BOTÃO LOGIN ##############-->
+                   
 
-
-                    <!-- ############ FIM BOTÃO LOGIN #############-->
-                    <!-- ###########################################-->
-                    <!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
-
-
-
-                </StackLayout>
             </Grid>
 
-            <!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
-            <!-- ###########################################-->
-            <!-- ############### ANIMAÇÃO ##############-->
-            
-            
-            <!--<Grid IsVisible="{Binding IsVisible}"
-            Margin="0,-1,0,0"
-            VerticalOptions="FillAndExpand">
-
-            <Label Text="Welcome to Xamarin Forms!" 
-           VerticalOptions="Center" 
-           HorizontalOptions="Center" />
-            
-            
-
-
-            <Grid x:Name="SplashGrid" 
-                  BackgroundColor="{StaticResource Primary}">
-                <Image
-                    x:Name="Logo" 
-                    Source="logo" 
-                    HorizontalOptions="Center" 
-                    VerticalOptions="Center">
-                    <Image.TranslationY>
-                        <OnPlatform x:TypeArguments="x:Double">
-
-                            <On Platform="Android">-12</On>
-                        </OnPlatform>
-                    </Image.TranslationY>
-                </Image>
-            </Grid>
-        </Grid>-->
-
-            <!-- ############ FIM ANIMAÇÃO #############-->
-            <!-- ###########################################-->
-            <!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx-->
-
-
-        </StackLayout>
-    </AbsoluteLayout>
+           
+    </controls:KeyboadLogin>
 </ContentPage>

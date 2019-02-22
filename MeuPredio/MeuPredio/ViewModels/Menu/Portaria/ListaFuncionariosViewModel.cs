@@ -3,6 +3,7 @@ using MeuPredio.Services;
 using MeuPredio.ViewModels.Menu.Portaria;
 using MeuPredio.Views;
 using Rg.Plugins.Popup.Services;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.Windows.Input;
@@ -23,6 +24,7 @@ namespace MeuPredio.ViewModels
         }
 
         public ObservableCollection<Funcionarios> _listaFuncionáriosFiltrada { get; set; }
+        public NovoFuncionarioViewModel novoFuncionario { get; set; }
 
         private string _nome;
 
@@ -107,6 +109,7 @@ namespace MeuPredio.ViewModels
         public ICommand NavigationCommand { get { return new Command<Funcionarios>(OnNavigationExecute); } }
         public ICommand MoreCommand { get { return new Command(OnMoreExecute); } }
         public ICommand OpcaoCommand { get { return new Command(OnOpcaoExecute); } }
+        public ICommand AddCommand { get { return new Command(OnAddExecute); } }
 
         #endregion
 
@@ -116,6 +119,7 @@ namespace MeuPredio.ViewModels
         {
             apiService = new ApiService();
             ListaFuncionarios = new ObservableCollection<Funcionarios>();
+            novoFuncionario = new NovoFuncionarioViewModel();
             popUpOpcaoViewModel = new PopUpOpcaoViewModel();
             //ListaFunc();
             //TesteList();
@@ -253,6 +257,13 @@ namespace MeuPredio.ViewModels
         private async void OnOpcaoExecute(object obj)
         {
             await PopupNavigation.PushAsync(new PopUpOpcaoPage());
+        }
+
+
+
+        private async void OnAddExecute(object obj)
+        {
+            await Navigation.PushAsync<NovoFuncionarioViewModel>(false);
         }
 
         #endregion
