@@ -6,6 +6,8 @@
     xmlns:local="clr-namespace:MeuPredio.Helpers.Behaviors"
     xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
     Title="Lista de Funcionários">
+    
+    
 
 
 
@@ -20,6 +22,36 @@
     <ContentPage.Content>
 
         <StackLayout>
+            <!--<StackLayout
+                HeightRequest="70"
+                VerticalOptions="Start"
+                HorizontalOptions="FillAndExpand"
+                BackgroundColor="Gray"
+                Spacing="-10"
+                 Orientation="Horizontal"
+                 BindableLayout.ItemsSource="{Binding ListaFuncionarios}">
+                <BindableLayout.ItemTemplate>
+                    <DataTemplate>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="*" />
+                                <RowDefinition Height="Auto" />
+                            </Grid.RowDefinitions>
+                            <controls:CircleImage
+                                        HorizontalOptions="StartAndExpand"
+                                        VerticalOptions="Center"
+                                        BorderColor="#ffffff"
+                                        BorderThickness="2" 
+                                        Aspect="AspectFill" 
+                                        Source="{Binding ImagemFullPath}"
+                                        WidthRequest="40"
+                                        HeightRequest="40"/>
+
+                        </Grid>
+                    </DataTemplate>
+                </BindableLayout.ItemTemplate>
+
+            </StackLayout>-->
 
 
             <!--ListView-->
@@ -61,10 +93,16 @@
                                         <ColumnDefinition Width="20"/>
                                     </Grid.ColumnDefinitions>
 
-                                    
-                                    
+                                    <!--<BoxView
+                                        HorizontalOptions="Center"
+                                        BackgroundColor="Gray"
+                                        WidthRequest="4"
+                                        HeightRequest="100"/>-->
+
+
+
                                     <controls:CircleImage
-                                        HorizontalOptions="StartAndExpand"
+                                        HorizontalOptions="Center"
                                         BorderColor="#65B980"
                                         BorderThickness="1" 
                                         Aspect="AspectFill" 
@@ -73,7 +111,6 @@
                                         HeightRequest="60"/>
 
 
-                                    
                                     <Label
                                         FontSize="16"
                                         VerticalOptions="Center"
@@ -93,35 +130,7 @@
 
             <!--BindableLayout-->
 
-            <!--<StackLayout
-                Spacing="-20"
-                 Orientation="Horizontal"
-                 BindableLayout.ItemsSource="{Binding ListaFuncionarios}">
-                <BindableLayout.ItemTemplate>
-                    <DataTemplate>
-                        <Grid>
-                            <Grid.RowDefinitions>
-                                <RowDefinition Height="*" />
-                                <RowDefinition Height="Auto" />
-                            </Grid.RowDefinitions>
-                            <controls:CircleImage
-                                        HorizontalOptions="StartAndExpand"
-                                        BorderColor="#ffffff"
-                                        BorderThickness="2" 
-                                        Aspect="AspectFill" 
-                                        Source="{Binding ImagemFullPath}"
-                                        WidthRequest="60"
-                                        HeightRequest="60"/>
-                       
-                        </Grid>
-                    </DataTemplate>
-                </BindableLayout.ItemTemplate>
-            </StackLayout>-->
-
-
-
             <!--FlexLayout-->
-            
             
             <!--<ScrollView>
                 <FlexLayout
