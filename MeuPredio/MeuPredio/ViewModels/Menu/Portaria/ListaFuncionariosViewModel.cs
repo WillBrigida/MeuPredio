@@ -82,6 +82,15 @@ namespace MeuPredio.ViewModels
             set { SetProperty(ref _status, value); }
         }
 
+        private bool _atualizacao;
+
+        public bool Atualizacao
+        {
+            get { return _atualizacao; }
+            set { SetProperty(ref _atualizacao, value); }
+        }
+
+
 
         static string nome = "";
         static string imagem = "";
@@ -110,6 +119,7 @@ namespace MeuPredio.ViewModels
         public ICommand MoreCommand { get { return new Command(OnMoreExecute); } }
         public ICommand OpcaoCommand { get { return new Command(OnOpcaoExecute); } }
         public ICommand AddCommand { get { return new Command(OnAddExecute); } }
+        public ICommand AtualizacaoCommand { get { return new Command(OnAtualizacaoExecute); } }
 
         #endregion
 
@@ -176,7 +186,7 @@ namespace MeuPredio.ViewModels
         private async void LoadFuncionarios()
         {
             this.IsRunning = true;
-            var funcionarios = await apiService.Get<Funcionarios>("https://backandmeupredio2.azurewebsites.net/", " /api", "/Funcionarios");
+            var funcionarios = await apiService.Get<Funcionarios>("https://backandmeupredio2.azurewebsites.net", " /api", "/Funcionarios");
             ConverterFuncionarios(funcionarios);
             this.IsRunning = false;
         }
@@ -188,7 +198,7 @@ namespace MeuPredio.ViewModels
             {
                 ListaFuncionarios.Add(new Funcionarios
                 {
-                    
+
                     NomeFuncionario = item.NomeFuncionario,
                     SobrenomeFuncionario = item.SobrenomeFuncionario,
                     FuncaoFuncionario = item.FuncaoFuncionario,
@@ -197,7 +207,7 @@ namespace MeuPredio.ViewModels
                     TelefoneFuncionario = item.TelefoneFuncionario,
                     ObservaçãoFuncionario = item.ObservaçãoFuncionario,
                     ImagemFuncionario = item.ImagemFuncionario,
-                   
+
                 });
             }
         }
@@ -264,6 +274,15 @@ namespace MeuPredio.ViewModels
         private async void OnAddExecute(object obj)
         {
             await Navigation.PushAsync<NovoFuncionarioViewModel>(false);
+        }
+
+
+
+        private void OnAtualizacaoExecute(object obj)
+        {
+            this.IsRunning = true;
+            LoadFuncionarios();
+            this.IsRunning = false;
         }
 
         #endregion

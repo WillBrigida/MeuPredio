@@ -1,10 +1,11 @@
-﻿using System;
+﻿using MeuPredio.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
 namespace MeuPredio.Models
 {
-    public class Funcionarios 
+    public class Funcionarios : BaseViewModel
     {
         public int IdFuncionario { get; set; }
         public string NomeFuncionario { get; set; }
@@ -15,6 +16,15 @@ namespace MeuPredio.Models
         public string FuncaoFuncionario { get; set; }
         public string StatusFuncionario { get; set; }
         public string ImagemFuncionario { get; set; }
+
+        private bool _isComplete;
+
+        public bool IsComplete
+        {
+            get { return _isComplete; }
+            set {SetProperty(ref _isComplete , value); }
+        }
+
         public string ImagemFullPath
         {
             get

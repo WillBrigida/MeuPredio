@@ -3,13 +3,14 @@
     xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MeuPredio.Views.NovoFuncionarioPage">
-    
-    
+
+
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+            <Entry
+                Text="{Binding Nome}"/>
+            <Button
+                Command="{Binding NovoFuncionarioCommand}"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

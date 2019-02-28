@@ -5,9 +5,11 @@
     x:Class="MeuPredio.Views.ListaFuncionariosPage"
     xmlns:local="clr-namespace:MeuPredio.Helpers.Behaviors"
     xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
+    xmlns:forms="clr-namespace:Lottie.Forms;assembly=Lottie.Forms"
+    xmlns:local1="clr-namespace:MeuPredio.Controls"
     Title="Lista de Funcionários">
-    
-    
+
+
 
 
 
@@ -22,6 +24,81 @@
     <ContentPage.Content>
 
         <StackLayout>
+
+
+
+
+            <!--<forms:AnimationView
+                Margin="40"
+                VerticalOptions="FillAndExpand"
+                HorizontalOptions="FillAndExpand"
+                x:Name="animationView"
+                Animation="check.json" 
+	            AutoPlay="true"
+                Loop="False"/>-->
+
+            <!--<Grid x:Name="MainGrid">
+                <Frame x:Name="MainFrame" BackgroundColor="White" Margin="20" CornerRadius="10" HasShadow="false">
+                    <StackLayout>
+                        <ListView x:Name="MainList" 
+                          ItemsSource="{Binding ListaFuncionarios}" 
+                          HasUnevenRows="true">
+                            <ListView.ItemTemplate>
+                                <DataTemplate>
+                                    <ViewCell>
+                                        <StackLayout 
+                                            Padding="8" 
+                                            Orientation="Horizontal">
+                                            
+                                            <local1:FancyCheckbox 
+                                                IsChecked="{Binding IsComplete}" 
+                                                HeightRequest="80" WidthRequest="80"/>
+                                            
+                                            <Label 
+                                                Text="{Binding NomeFuncionario}" 
+                                                VerticalTextAlignment="Center" 
+                                                HorizontalOptions="FillAndExpand"/>
+                                            
+                                        </StackLayout>
+                                    </ViewCell>
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+                        <StackLayout Orientation="Horizontal" Spacing="16">
+                            <Button Text="Mark All" Clicked="All_Tapped" HorizontalOptions="FillAndExpand"/>
+                            <Button Text="Done" Clicked="Done_Tapped" HorizontalOptions="FillAndExpand"/>
+                        </StackLayout>
+                    </StackLayout>
+                </Frame>
+                <Frame x:Name="PopupFrame" IsVisible="false" CornerRadius="10" Margin="30" VerticalOptions="Center">
+                    <StackLayout Spacing="10">
+                        <forms:AnimationView 
+                            x:Name="DoneAnimation" 
+                            Animation="done.json" 
+                            WidthRequest="150" 
+                            HeightRequest="150" />
+                        
+                        <Label 
+                            Text="You are all done!" 
+                            HorizontalTextAlignment="Center"/>
+                        
+                        <Button 
+                            Text="OK" 
+                            Clicked="Ok_Tapped"/>
+                    </StackLayout>
+                </Frame>
+            </Grid>-->
+
+
+
+
+
+
+
+
+
+
+
             <!--<StackLayout
                 HeightRequest="70"
                 VerticalOptions="Start"
@@ -55,20 +132,22 @@
 
 
             <!--ListView-->
-          
+
             <ListView
                 BackgroundColor="White"
                 Margin="10"
                 CachingStrategy ="RecycleElement"
                 SeparatorVisibility="Default"
                 HasUnevenRows="True"  
-                IsRefreshing="{Binding IsRunning}"
+                IsPullToRefreshEnabled="True"
+                IsRefreshing="{Binding IsRunning, Mode=TwoWay}"
+                RefreshCommand="{Binding AtualizacaoCommand, Mode=TwoWay}"
                 IsVisible="True"
                 SelectionMode="None"
                 ItemsSource="{Binding ListaFuncionarios}">
 
 
-                
+
                 <ListView.Behaviors>
                     <local:EventToCommandBehavior
                                 
@@ -76,9 +155,9 @@
                                 Command="{Binding NavigationCommand, Mode=TwoWay}"
                                 Converter="{StaticResource ItemTappedConverter}" />
                 </ListView.Behaviors>
-                
 
-                
+
+
 
 
                 <ListView.ItemTemplate>
@@ -118,7 +197,7 @@
                                         HorizontalOptions="StartAndExpand"
                                         Grid.Column="1"
                                         Text="{Binding NomeFuncionario }"/>
-                                    
+
                                 </Grid>
                             </StackLayout>
                         </ViewCell>
@@ -131,7 +210,7 @@
             <!--BindableLayout-->
 
             <!--FlexLayout-->
-            
+
             <!--<ScrollView>
                 <FlexLayout
                     Wrap="Wrap"
@@ -183,12 +262,13 @@
                 </FlexLayout>
 
             </ScrollView>-->
-            
+
 
         </StackLayout>
-       
+
     </ContentPage.Content>
     <ContentPage.ToolbarItems>
-        <ToolbarItem Icon="Att.png" Command="{Binding AddCommand}"/>
+        <ToolbarItem Icon="baseline_add_white_24" Command="{Binding AddCommand}"/>
     </ContentPage.ToolbarItems>
 </ContentPage>
+
