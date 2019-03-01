@@ -149,39 +149,7 @@ namespace MeuPredio.ViewModels
 
         #region Métodos
 
-        //private void ListaFunc()
-        //{
-        //    IsRunning = true;
-
-        //    ListaFuncionarios = new ObservableCollection<Funcionarios>()
-        //   {
-        //       new Funcionarios{ NomePessoa = "Robson", SobrenomePessoa = "Sobrenome",
-        //      TelefonePessoa = "(21) 90000 - 0000", DescricaoFuncionario = "Expediente: Seg à Sex, 7:00 às 15:00 e Sab/Dom alternados de 7:00 às 17:00",
-        //     FuncaoFuncionario = "Porteiro Chefe",  = "jose_silva@gmail.com", ImagemFuncionario = "fot1" },
-
-        //        new Funcionarios{ NomePessoa = "Raimundo", SobrenomePessoa = "Sobrenome",
-        //      TelefonePessoa = "(21) 90000 - 0000", Descricao = "Expediente: 12x36 – 19:00 às 07:00h",
-        //     FuncaoFuncionario = "Porteiro Noturno", EmailPessoa = "marcos@hotmailmail.com", Imagem = "fot2"},
-
-        //         new Funcionarios{ NomePessoa = "Everaldo", SobrenomePessoa = "Sobrenome",
-        //      TelefonePessoa = "(21) 90000 - 0000", Descricao = "Expediente: 12x36 – 19:00 às 07:00h",
-        //     FuncaoFuncionario = "Porteiro Noturno", EmailPessoa = "jose_silva@gmail.com", Imagem = "fot1"},
-
-        //          new Funcionarios{ NomePessoa = "Vitor", SobrenomePessoa = "Sobrenomeo",
-        //      TelefonePessoa = "(21) 90000 - 0000", Descricao = "Expediente 12x36 – 07:00 às 19:00h",
-        //     FuncaoFuncionario = "Porteiro Diurno", EmailPessoa = "jose_silva@gmail.com", Imagem = "fot2"},
-
-        //           new Funcionarios{ NomePessoa = "Guilherme", SobrenomePessoa = "Sobrenome",
-        //      TelefonePessoa = "(21) 90000 - 0000", Descricao = "Expediente Seg à Sex, 23:00 à 01:00 e Sab/Dom alternados de 23:00 à 01:00",
-        //     FuncaoFuncionario = "Folguista", EmailPessoa = "jose_silva@gmail.com", Imagem = "fot1"},
-
-        //             new Funcionarios{ NomePessoa = "Ediclaudio", SobrenomePessoa = "Sobrenome",
-        //      TelefonePessoa = "(21) 90000 - 0000", Descricao = "Expediente Seg à Sab 07:00 às 16:00h",
-        //     FuncaoFuncionario = "Limpeza", EmailPessoa = "jose_silva@gmail.com", Imagem = "fot2"},
-
-        //   };
-        //    IsRunning = false;
-        //}
+      
 
         private async void LoadFuncionarios()
         {

@@ -7,6 +7,7 @@
     xmlns:controls="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
     xmlns:forms="clr-namespace:Lottie.Forms;assembly=Lottie.Forms"
     xmlns:local1="clr-namespace:MeuPredio.Controls"
+    xmlns:lv="clr-namespace:Xamarin.Forms.MultiSelectListView;assembly=Xamarin.Forms.MultiSelectListView" 
     Title="Lista de Funcionários">
 
 
@@ -150,7 +151,6 @@
 
                 <ListView.Behaviors>
                     <local:EventToCommandBehavior
-                                
                                 EventName="ItemTapped" 
                                 Command="{Binding NavigationCommand, Mode=TwoWay}"
                                 Converter="{StaticResource ItemTappedConverter}" />
@@ -204,6 +204,92 @@
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
+
+
+
+
+            <!--MultiSelect-->
+            <!--<ListView
+                BackgroundColor="White"
+                lv:MultiSelect.Enable="true"
+                Margin="10"
+                CachingStrategy ="RecycleElement"
+                SeparatorVisibility="Default"
+                HasUnevenRows="True"  
+                IsPullToRefreshEnabled="True"
+                IsRefreshing="{Binding IsRunning, Mode=TwoWay}"
+                RefreshCommand="{Binding AtualizacaoCommand, Mode=TwoWay}"
+                IsVisible="True"
+                SelectionMode="Single"
+                ItemsSource="{Binding ListaFuncionarios}">
+
+
+
+                <ListView.Behaviors>
+                    <local:EventToCommandBehavior
+                                
+                                EventName="ItemTapped" 
+                                Command="{Binding NavigationCommand, Mode=TwoWay}"
+                                Converter="{StaticResource ItemTappedConverter}" />
+                </ListView.Behaviors>
+
+
+
+
+
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <lv:SelectableCell x:Name="SelectableCell">
+
+                            <lv:SelectableCell.CheckView>
+                                <Label
+                                    TextColor="Green"
+                                    Text="&#xf058;"
+                                    FontSize="20"
+                                    Style="{StaticResource MainMenuIconsStyle}"/>
+                            </lv:SelectableCell.CheckView>
+
+                            <lv:SelectableCell.DataView>
+                                <StackLayout 
+                                   
+                                  
+                                    Spacing="20"
+                                    Orientation="Vertical" 
+                                    Padding="0,0,20,0">
+                                    <Grid>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="60"/>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="10"/>
+                                        </Grid.ColumnDefinitions>
+                                   
+                                    
+                                    <controls:CircleImage
+                                        Grid.Column="0"
+                                        HorizontalOptions="Center"
+                                        BorderColor="#65B980"
+                                        BorderThickness="1" 
+                                        Aspect="AspectFill" 
+                                        Source="{Binding ImagemFullPath}"
+                                        WidthRequest="60"
+                                        HeightRequest="60"/>
+
+                                    <Label 
+                                        Grid.Column="1"
+                                        VerticalOptions="Center"
+                                        Text="{Binding NomeFuncionario}" 
+                                        FontSize="17" ></Label>
+
+                                  
+
+                                    </Grid>
+                                </StackLayout>
+                            </lv:SelectableCell.DataView>
+
+                        </lv:SelectableCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>-->
 
 
 
